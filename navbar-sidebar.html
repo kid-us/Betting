@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- All important cdns -->
+    <!-- ###################### -->
+
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <!-- Bootstrap Icon-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <!-- Bootstrap Tooltip -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ################## -->
+    <!-- Animate css -->
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <!-- Website Icon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Document</title>
+
+    <!-- CSS Style -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@100;400&family=Russo+One&display=swap");
+
+      /* ###################### Global styles  */
+
+      :root {
+        --main-color: #191919;
+        --secondary-color: #252525;
+        --box-bg: #daa425;
+        --btnBg: #dd9d07;
+        --borderBg: #110e49;
+      }
+
+      body {
+        background-color: var(--main-color);
+        color: #fff;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Poppins", sans-serif;
+        font-family: "Rowdies", cursive;
+        font-family: "Russo One", sans-serif;
+      }
+
+      p,
+      a,
+      li,
+      span,
+      input,
+      label,
+      textarea {
+        font-family: "Raleway", sans-serif;
+      }
+
+      .bg {
+        background-color: var(--main-color);
+        color: #fff;
+      }
+
+      .bg2 {
+        background-color: var(--secondary-color) !important;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      div a:hover {
+        color: gray;
+      }
+
+      p a {
+        text-decoration: none;
+      }
+
+      ul li {
+        list-style: none;
+      }
+
+      ul li a {
+        text-decoration: none;
+      }
+
+      div a {
+        color: #f2f2f2;
+      }
+
+      ::-webkit-scrollbar {
+        height: 5px;
+        width: 5px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #8c8a8a;
+      }
+
+      .navbar-brand {
+        margin-left: -9px !important;
+      }
+
+      #user-balance {
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      #sm-user-balance {
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      #dashboard-links {
+        top: 4rem;
+        right: 40px;
+        position: fixed;
+        background-color: #242222;
+        border-radius: 5px;
+        box-shadow: 1px 3px 4px rgb(188, 50, 50);
+        width: 180px;
+        z-index: 40;
+      }
+
+      #dashboard-links ul li {
+        padding-top: 10px;
+      }
+
+      #dashboard-links ul li a {
+        color: rgb(158, 157, 157);
+      }
+
+      #dashboard-links ul li a:hover {
+        color: #fff;
+      }
+
+      #sidebar {
+        position: relative;
+      }
+
+      .sidebar-wrapper {
+        position: fixed;
+        width: 50px;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: var(--secondary-color);
+      }
+
+      .sidebar-wrapper img {
+        filter: grayscale(80%);
+        transition: 0.5s;
+      }
+
+      .sidebar-wrapper img:hover {
+        filter: grayscale(0%);
+      }
+
+      #navbar {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        overflow: hidden;
+        background-color: var(--secondary-color);
+        z-index: 2;
+      }
+
+      #navbar a {
+        display: inline;
+        text-decoration: none;
+      }
+
+      .account-link {
+        background-color: var(--btnBg);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 2px 3px 5px red;
+      }
+
+      .account-link:hover {
+        transition: 1s;
+        color: #efefef;
+        box-shadow: none;
+      }
+
+      .wallet {
+        box-shadow: 1px 2px red;
+      }
+
+      .wallet:hover {
+        transition: 1s;
+        color: #efefef;
+        box-shadow: none;
+      }
+
+      .cursor {
+        cursor: pointer;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      /* Btn styles */
+
+      .sm-navbar {
+        position: relative;
+      }
+
+      .menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: var(--main-color);
+        width: 440px;
+        z-index: 4;
+        height: 100vh;
+        box-shadow: 1px 2px 5px rgb(188, 50, 50);
+      }
+
+      .menu ul li,
+      .menu ul li a {
+        list-style: none;
+        margin-top: 1.8rem;
+        margin-bottom: 1.8rem;
+      }
+
+      /* FAQ */
+      .faqs {
+        border: 1px solid #ffae03;
+        position: fixed;
+        right: 20px;
+        bottom: 10px;
+        background-color: var(--main-color);
+        width: 530px;
+        height: 70vh;
+        overflow: scroll;
+        border-radius: 10px;
+      }
+
+      @media (max-width: 575.98px) {
+        .faqs {
+          border: 1px solid #ffae03;
+          position: fixed;
+          right: 0;
+          bottom: 20px;
+          background-color: var(--main-color);
+          width: 100%;
+          height: 80vh;
+          overflow: scroll;
+          border-radius: 10px;
+        }
+      }
+
+      .faq-header {
+        margin-bottom: 100px;
+      }
+
+      /* Social Media */
+      #social-media {
+        position: fixed;
+        padding: 12px 30px;
+        bottom: 2em;
+        left: 3.5em;
+        border: 1px solid #ffae03;
+        background-color: var(--main-color);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div id="sidebar" class="d-none d-md-block">
+      <div class="sidebar-wrapper mt-5 pt-5 text-center">
+        <p
+          data-bs-toggle="tooltip"
+          data-bs-placement="right"
+          title="  H O M E"
+          class="mb-4 pb-2"
+        >
+          <a href="index.html"><img src="mmm.png" alt="" width="27px" /></a>
+        </p>
+        <hr class="w-25 ms-3 ps-3" />
+        <p
+          data-bs-toggle="tooltip"
+          data-bs-placement="right"
+          title="  S p o r t s"
+          class="mb-4 pb-2"
+        >
+          <a href="#"><img src="throw.png" alt="" width="27px" /></a>
+        </p>
+        <p
+          data-bs-toggle="tooltip"
+          data-bs-placement="right"
+          title="  G a m e s"
+          class="mb-4 pb-2"
+        >
+          <a href="games.html"><img src="dice.png" alt="" width="27px" /></a>
+        </p>
+        <p
+          data-bs-toggle="tooltip"
+          data-bs-placement="right"
+          title="  T o u r n a m e n t s"
+          class="mb-4 pb-2"
+        >
+          <a href="tournaments.html"
+            ><img src="trophy.png" alt="" width="27px"
+          /></a>
+        </p>
+
+        <hr class="w-25 ms-3 ps-3" />
+
+        <p
+          data-bs-toggle="tooltip"
+          data-bs-placement="right"
+          title="  W a l l e t"
+          class="mb-4 pb-2"
+        >
+          <a href="wallet.html"><img src="wallet.png" alt="" width="27px" /></a>
+        </p>
+
+        <p
+          data-bs-toggle="tooltip"
+          data-bs-placement="right"
+          title="  P r o m o t i o n s"
+          class="mb-4 pb-2"
+        >
+          <a href="promotion.html"
+            ><img src="img//sidebar/promotion.png" alt="" width="27px"
+          /></a>
+        </p>
+
+        <p
+          data-bs-toggle="tooltip"
+          data-bs-placement="right"
+          title="  G u i d e l i n e s s"
+          class="mb-4 pb-2"
+        >
+          <a href="guide.html"
+            ><img src="img/sidebar/guide.png" alt="" width="27px"
+          /></a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div id="navbar" class="px-3 py-2 bg2">
+      <!-- Large Device navbar -->
+      <div class="d-none d-md-block">
+        <div class="float-start ps-5">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logolight1.png" alt="logo" width="120px" />
+          </a>
+        </div>
+        <div class="float-end pe-5 pt-2 small fw-semibold">
+          <!-- Before Login -->
+          <div id="before-login" class="hidden">
+            <a href="login.html" class="account-link px-4 py-2 small"
+              >Register/Login</a
+            >
+          </div>
+
+          <div id="after-login" class="hidden">
+            <a href="wallet.html" class="py-1 wallet rounded bg2">
+              <span id="user-balance" class="py-1 px-3 bg-dark small"></span>
+              <span
+                class="px-3 text-black px-0 bg-warning py-1 rounded bi-wallet-fill"
+                >&nbsp; Wallet
+              </span>
+            </a>
+
+            <a href="#" class="ms-5">
+              <img src="img/throw.png" alt="" width="20px" />
+              Sports
+            </a>
+            <a href="tournaments.html" class="mx-5">
+              <img src="img/trophy.png" alt="" width="20px" />
+              Tournament
+            </a>
+
+            <a href="games.html" class="me-5">
+              <img src="img/dice.png" alt="" width="20px" />
+              Games</a
+            >
+
+            <span
+              id="username-link"
+              class="cursor bi bi-person-fill text-warning"
+            >
+              <span id="user-name"></span>
+              &nbsp;
+              <span id="icon-link" class="bi bi-caret-down-fill small"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- Dashboard dropdown -->
+      <div id="dashboard-links" class="hidden py-3 small pe-3 ps-2">
+        <ul class="fw-semibold">
+          <li>
+            <a href="dashboard.html">
+              <span class="bi-person-fill text-warning"></span> Profile</a
+            >
+          </li>
+          <hr class="my-2" />
+          <li>
+            <a href="setting.html">
+              <span class="bi-gear-fill text-warning"></span>
+              Setting</a
+            >
+          </li>
+          <hr class="my-2" />
+          <li>
+            <a id="logout" class="cursor">
+              <span class="bi-power text-warning"></span> Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Small device navbar -->
+      <div class="d-block d-md-none">
+        <div class="row justify-content-between px-2">
+          <div class="col-4">
+            <a class="navbar-brand" href="index.html">
+              <img
+                src="img/logolight1.png"
+                class="me-5"
+                alt="logo"
+                width="120px"
+              />
+            </a>
+          </div>
+          <div id="sm-wallet" class="col-6 mt-2 ms-4 hidden">
+            <p>
+              <a href="wallet.html" class="py-1 wallet rounded bg2">
+                <span
+                  id="sm-user-balance"
+                  class="py-1 px-2 bg-dark small"
+                ></span>
+                <span
+                  class="px-2 text-black bg-warning py-1 rounded bi-wallet-fill"
+                >
+                </span>
+              </a>
+            </p>
+          </div>
+          <div class="col-1">
+            <p id="menu-btn" class="bi bi-list ms-1 fs-2"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- small device menu modal -->
+      <div class="sm-navbar">
+        <div
+          id="menu-page"
+          class="menu animate__animated animate__bounceInLeft hidden"
+        >
+          <div class="float-start">
+            <img src="img/logo2.png" alt="logo" height="80px" />
+          </div>
+          <div class="float-end">
+            <p
+              id="close-menu"
+              class="nav-item text-danger fs-1 me-5 bi-x-lg pt-3"
+            ></p>
+          </div>
+          <ul class="pe-5 mt-5 pt-5">
+            <!-- Before Login -->
+            <div id="sm-before-login" class="hidden">
+              <p class="pt-5 pb-3 fs-4">Account</p>
+              <li class="nav-item">
+                <a
+                  href="register.html"
+                  class="nav-link account-link px-5 py-2 small"
+                  >Register</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="login.html"
+                  class="nav-link account-link px-5 py-2 small"
+                  >Login</a
+                >
+              </li>
+            </div>
+
+            <!-- After Login -->
+            <ul id="sm-after-login" class="hidden">
+              <p
+                class="pt-5 pb-3 fw-semibold bi bi-person-fill fs-1 text-warning"
+                id="small-username"
+              >
+                <span id="user-name"> </span>
+              </p>
+              <li>
+                <a href="dashboard.html" class="fs-3 fw-semibold">
+                  <span class="bi-person-fill text-warning"></span>
+                  Profile
+                </a>
+              </li>
+              <li>
+                <a href="#" class="fs-3 fw-semibold">
+                  <img src="img/throw.png" width="20px" />
+                  Sports</a
+                >
+              </li>
+              <li>
+                <a href="tournaments.html" class="fs-3 fw-semibold"
+                  ><img src="img/trophy.png" width="20px" />Tournaments</a
+                >
+              </li>
+              <li>
+                <a href="games.html" class="fs-3 fw-semibold">
+                  <img src="img/dice.png" width="20px" />
+                  Games</a
+                >
+              </li>
+
+              <hr class="my-2" />
+              <li>
+                <a href="setting.html" class="fs-3 fw-semibold">
+                  <span class="bi-gear-fill text-warning"></span> Setting
+                </a>
+              </li>
+              <hr class="my-2" />
+
+              <li>
+                <a id="logout-small" class="fs-3 fw-semibold">
+                  <span class="bi-power text-warning"></span> Logout
+                </a>
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Navbar-->
+    <script>
+      //Bootstrap Tooltip
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+
+      // Small device navbar
+      const menuBtn = document.getElementById("menu-btn");
+      const menuPage = document.getElementById("menu-page");
+      const closeMenuBtn = document.getElementById("close-menu");
+
+      if (menuBtn) {
+        menuBtn.addEventListener("click", () => {
+          if (menuPage.classList.contains("hidden")) {
+            menuPage.classList.remove("hidden");
+          } else {
+            menuPage.classList.add("hidden");
+          }
+        });
+      }
+      if (closeMenuBtn) {
+        closeMenuBtn.addEventListener("click", () => {
+          menuPage.classList.add("hidden");
+        });
+      }
+
+      // Dashboard username Link script
+      const usernameLink = document.getElementById("username-link");
+      const dashboardLinksPage = document.getElementById("dashboard-links");
+      const iconLink = document.getElementById("icon-link");
+      if (usernameLink) {
+        usernameLink.addEventListener("click", () => {
+          if (dashboardLinksPage.classList.contains("hidden")) {
+            dashboardLinksPage.classList.remove("hidden");
+            iconLink.classList.remove("bi-caret-down-fill");
+            iconLink.classList.add("bi-caret-up-fill");
+          } else {
+            dashboardLinksPage.classList.add("hidden");
+            iconLink.classList.remove("bi-caret-up-fill");
+            iconLink.classList.add("bi-caret-down-fill");
+          }
+        });
+      }
+    </script>
+
+    <!-- JavaScript Logout -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Find the elements with the specified IDs
+        const logoutLink = document.getElementById("logout");
+        const logoutSmallLink = document.getElementById("logout-small");
+
+        // Function to clear localStorage and redirect to login.html
+        const handleLogoutClick = (event) => {
+          event.preventDefault(); // Prevent the default link behavior
+          localStorage.clear(); // Clear localStorage
+          window.location.href = "/login.html"; // Redirect to login.html
+        };
+
+        // Add a click event listener to the "logout" link
+        if (logoutLink) {
+          logoutLink.addEventListener("click", handleLogoutClick);
+        }
+
+        // Add a click event listener to the "logout-small" link
+        if (logoutSmallLink) {
+          logoutSmallLink.addEventListener("click", handleLogoutClick);
+        }
+      });
+    </script>
+
+    <!-- JQuery -->
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          url: "https://api.maverickhabesha.com/api/v1/auth/get-current-user",
+          type: "GET",
+          beforeSend: function (xhr) {
+            xhr.setRequestHeader(
+              "Authorization",
+              "Bearer " + localStorage.getItem("access_token")
+            );
+          },
+          success: function (response) {
+            $("#after-login").removeClass("hidden");
+            $("#sm-after-login").removeClass("hidden");
+            $("#user-name").text(response.data.username);
+            $("#small-username").text(response.data.username);
+            $.ajax({
+              url: "https://api.maverickhabesha.com/api/v1/balance/get-balance",
+              type: "GET",
+              beforeSend: (xhr) => {
+                xhr.setRequestHeader(
+                  "Authorization",
+                  "Bearer " + localStorage.getItem("access_token")
+                );
+              },
+              success: (response) => {
+                $("#user-balance").text(response.amount + " ETB");
+                $("#sm-user-balance").text(response.amount + " ETB");
+                $("#sm-wallet").removeClass("hidden");
+              },
+              error: (jqXHR, textStatus, errorThrown) => {
+                console.error(errorThrown);
+              },
+            });
+          },
+          error: function (jqXHR, textStatus, errorThrown) {
+            console.log("fail");
+            $("#before-login").removeClass("hidden");
+            $("#sm-before-login").removeClass("hidden");
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

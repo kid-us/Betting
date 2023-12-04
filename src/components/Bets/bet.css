@@ -1,0 +1,82 @@
+.d-flex {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px 0px;
+}
+
+.d-flex::-webkit-scrollbar {
+  display: none;
+}
+
+.logo-container {
+  position: relative;
+  margin-right: 30px;
+}
+
+.logo {
+  width: 35px !important;
+}
+
+@media (min-width: 992px) {
+  .logo {
+    width: 55px !important;
+  }
+}
+
+.bet-logo {
+  object-fit: contain;
+  border-radius: 8px;
+  filter: grayscale(100%);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.bet-logo:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+.bet-logo {
+  object-fit: contain;
+  border-radius: 8px;
+  filter: grayscale(100%);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.bet-logo:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+.sport-group {
+  width: 220px;
+  /* position: absolute; */
+  line-height: 0%;
+}
+
+li {
+  list-style: none;
+}
+
+.bets {
+  line-height: 30%;
+}
+
+.odds:hover {
+  background-color: #584200 !important;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #a47f05 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.odds {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@100;400&family=Russo+One&display=swap");
+
+/* ###################### Global styles  */
+
+:root {
+  --main-color: #191919;
+  --secondary-color: #252525;
+  --box-bg: #daa425;
+  --btnBg: #dd9d07;
+  --borderBg: #110e49;
+}
+
+body {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-family: "Rowdies", cursive;
+  font-family: "Russo One", sans-serif;
+}
+
+p,
+a,
+li,
+span,
+input,
+label,
+textarea {
+  font-family: "Raleway", sans-serif;
+}
+
+.btn {
+  font-family: "Raleway", sans-serif;
+}
+
+.bg {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.bg2 {
+  background-color: var(--secondary-color) !important;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+div a:hover {
+  color: gray;
+}
+
+p a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+div a {
+  color: #f2f2f2;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8c8a8a;
+}

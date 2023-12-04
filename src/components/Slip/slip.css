@@ -1,0 +1,69 @@
+.slip {
+  position: relative;
+  z-index: 11;
+}
+
+.slip-container {
+  position: fixed;
+  width: 25% !important;
+  height: 100vh !important;
+  right: 0;
+}
+
+.sm-slip-container {
+  position: fixed;
+  width: 100%;
+  height: 91vh !important;
+  top: 0;
+  right: 0;
+}
+
+.slip-btn {
+  position: fixed;
+  z-index: 1;
+  bottom: 80px;
+  right: 10px;
+  width: 3%;
+  height: 5.5vh;
+  border-radius: 10px;
+  box-shadow: 2px 1px 20px red;
+}
+
+.slip-close {
+  margin-left: 170px;
+}
+
+.bets-container {
+  height: 55% !important;
+  /* direction: rtl; */
+  overflow: auto;
+}
+
+.sm-bets-container {
+  height: 48% !important;
+  overflow: auto;
+}
+.bet-slip {
+  box-shadow: 1px 1px 1px #ffc402;
+  /* direction: ltr; */
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed !important;
+}
+
+.bet-btn {
+  box-shadow: 2px 3px red;
+  transition: 0.5s;
+}
+
+.bet-btn:hover {
+  box-shadow: 1px 1px red;
+  transition: 0.5s;
+}
+
+.form-container {
+  position: relative;
+  /* top: 2em; */
+  bottom: 0;
+}
