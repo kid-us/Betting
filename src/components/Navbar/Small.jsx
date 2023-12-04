@@ -43,7 +43,7 @@ const Small = ({ user, balance }) => {
                 className="py-1 wallet rounded bg2"
               >
                 <span id="sm-user-balance" className="py-1 px-3 bg-dark small">
-                  8937478{balance} ETB
+                  {balance} ETB
                 </span>
                 <span className="px-2 text-black bg-warning py-1 rounded bi-wallet-fill"></span>
               </Link>
