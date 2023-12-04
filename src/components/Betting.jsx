@@ -81,6 +81,7 @@ const Betting = () => {
         setAdditionalOdds({});
         document.title = `${champ.map((cha) => cha.sport_title)}`;
         setLoading(false);
+        setShowSports(false);
       }, 100);
     } else if (key && id) {
       setLoading(true);
@@ -104,6 +105,7 @@ const Betting = () => {
 
         document.title = `${moreOdds.home_team} vs ${moreOdds.away_team}`;
         setLoading(false);
+        setShowSports(false);
       }, 100);
     }
   }, [filteredData, key, id, champ, upcoming]);
