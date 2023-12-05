@@ -49,6 +49,20 @@ textarea {
   background-color: var(--secondary-color) !important;
 }
 
+.bg-gold {
+  background: linear-gradient(
+    -145deg,
+    #dd9d07,
+    #262525,
+    #262525,
+    #dd9d07,
+    #262525,
+    #262525,
+    #dd9d07,
+    #262525
+  );
+}
+
 a {
   text-decoration: none;
   color: #fff;

@@ -17,17 +17,19 @@ const Slides = ({ slidesPerView }) => {
         >
           {promo.map((promotion) => (
             <SwiperSlide key={promotion.id}>
-              <div className="row px-3" style={{ height: "200px" }}>
-                <div className="col-12 bg2 rounded fw-semibold">
-                  <div className="row my-4">
+              <div className="row px-3" style={{ height: "210px" }}>
+                <div className="col-12 bg-gold rounded fw-semibold">
+                  <div className="row">
                     <div className="col-6 small">
-                      <p className="small">
+                      <p className="small mt-3">
                         <span className="bg-secondary px-2 py-1 rounded">
                           Promo
                         </span>
                       </p>
-                      <h4 className="text-warning">{promotion.title}</h4>
-                      <p>{promotion.note}</p>
+                      <h4 className="text-warning mt-5 px-1">
+                        {promotion.title}
+                      </h4>
+                      <p className="fs-6 px-1">{promotion.note}</p>
                     </div>
                     <div className="col-6">
                       <Img

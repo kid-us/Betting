@@ -31,7 +31,7 @@ import load_spades from "./Loading/spades.png";
 // Promotion
 import promoSoccer from "./soccer.jpg";
 import promoCricket from "./cricket.jpg";
-import promoNba from "./nba.png";
+import promoNba from "./nba.jpg";
 import promoUfc from "./ufc.jpg";
 import promoNfl from "./nfl.jpg";
 
