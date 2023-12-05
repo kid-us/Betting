@@ -86,3 +86,16 @@ div a {
 ::-webkit-scrollbar-thumb {
   background: #8c8a8a;
 }
+
+/* Swiper PAgination */
+.swiper-pagination {
+  position: relative;
+  padding-top: 10px !important;
+}
+.swiper-pagination-bullet {
+  background-color: white;
+}
+.swiper-pagination-bullet-active {
+  padding: 3px !important ;
+  background-color: #ffc107 !important;
+}

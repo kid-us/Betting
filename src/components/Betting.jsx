@@ -10,9 +10,11 @@ import Slip from "./Slip/Slip";
 import MenuBar from "./MenuBar";
 import Loading from "./Loading/Loading";
 import SmallSlip from "./Slip/SmallSlip";
+import Slides from "./Banners/Slides";
 import { upcoming } from "../constant/bet";
 import { champ } from "../constant/bet";
 import { filteredData } from "../constant/bet";
+import Swiper from "./Banners/Swiper";
 // import axios from "axios";
 // import { api_key } from "../constant/request";
 // import { api_url } from "../constant/request";
@@ -64,7 +66,7 @@ const Betting = () => {
   };
 
   // User Link
-   useEffect(() => {
+  useEffect(() => {
     if (!key && !id) {
       setLoading(true);
 
@@ -256,6 +258,7 @@ const Betting = () => {
               <Loading />
             ) : (
               <>
+                <Swiper></Swiper>
                 <Bet
                   onOddsClick={handleBets}
                   addOnOdds={additionalOdds}

@@ -28,6 +28,13 @@ import load_ball from "./Loading/loading2.png";
 import load_nine from "./Loading/nine.png";
 import load_spades from "./Loading/spades.png";
 
+// Promotion
+import promoSoccer from "./soccer.jpg";
+import promoCricket from "./cricket.jpg";
+import promoNba from "./nba.png";
+import promoUfc from "./ufc.jpg";
+import promoNfl from "./nfl.jpg";
+
 export {
   home,
   sports,
@@ -58,4 +65,10 @@ export {
   load_ball,
   load_nine,
   load_spades,
+  // Promotion
+  promoSoccer,
+  promoCricket,
+  promoNba,
+  promoNfl,
+  promoUfc,
 };
