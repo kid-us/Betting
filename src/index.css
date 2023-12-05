@@ -104,7 +104,7 @@ div a {
 /* Swiper PAgination */
 .swiper-pagination {
   position: relative;
-  padding-top: 10px !important;
+  padding-top: 50px !important;
 }
 .swiper-pagination-bullet {
   background-color: white;

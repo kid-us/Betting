@@ -30,13 +30,13 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
   };
 
   return (
-    <>
+    <div className="mt-4">
       {odds.map((game) => (
         <div
           className="row py-3 px-lg-4 p-0 bg2 rounded mb-3 shadow-lg"
           key={game.id}
         >
-          <p className="text-secondary">{game.sport_title}</p>
+          <p className="text-secondary ">{game.sport_title}</p>
           <hr className="p-0 text-secondary" />
           <div className="row justify-content-between">
             <div className="col-10">
@@ -147,7 +147,7 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
