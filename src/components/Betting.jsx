@@ -64,7 +64,7 @@ const Betting = () => {
   };
 
   // User Link
-  useEffect(() => {
+   useEffect(() => {
     if (!key && !id) {
       setLoading(true);
 
