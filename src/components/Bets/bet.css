@@ -80,3 +80,8 @@ li {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* TEam Name */
+.team-name {
+  font-size: clamp(13px, 2vw, 14px) !important;
+}

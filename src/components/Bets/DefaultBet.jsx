@@ -54,8 +54,8 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
 
           <div className="bets col-lg-4 col-12 pt-3">
             <div className="d-block d-md-none">
-              <p>
-                {game.home_team} <span className="text-info mx-4">vs</span>{" "}
+              <p className="">
+                {game.home_team} <span className="text-info mx-4">vs</span>
                 {game.away_team}
               </p>
             </div>
@@ -97,9 +97,9 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
                           )
                             ? "selected"
                             : "bg odds"
-                        }  cursor rounded ps-lg-4 ps-2 pb-1 pt-3`}
+                        } cursor rounded ps-lg-4 ps-2 pb-1 pt-3`}
                       >
-                        <p className="">{outcome.name}</p>
+                        <p className="team-name">{outcome.name}</p>
                         <p className="text-info pt-1 font-monospace">
                           {outcome.price}
                         </p>
@@ -134,9 +134,9 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
                           )
                             ? "selected"
                             : "bg odds"
-                        }  cursor rounded ps-lg-4 ps-2 pb-1 pt-3`}
+                        } cursor rounded ps-lg-4 ps-2 pb-1 pt-3`}
                       >
-                        <p>{outcome.name}</p>
+                        <p className="team-name">{outcome.name}</p>
                         <p className="text-info font-monospace">
                           {outcome.price}
                         </p>
