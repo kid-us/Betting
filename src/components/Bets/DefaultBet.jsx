@@ -30,7 +30,7 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
   };
 
   return (
-    <div className="mt-4">
+    <div className="mt-3">
       {odds.map((game) => (
         <div
           className="row py-3 px-lg-4 p-0 bg2 rounded mb-3 shadow-lg"
