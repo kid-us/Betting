@@ -19,7 +19,7 @@ const Slides = ({ slidesPerView }) => {
             <SwiperSlide key={promotion.id}>
               <div className="row px-3 fw-semibold">
                 <div className="col-12">
-                  <div className="row bg-gold rounded">
+                  <div className="row bg-gold rounded py-2">
                     <div className="col-6 small">
                       <p className="small mt-3">
                         <span className="bg-secondary px-2 py-1 rounded">
