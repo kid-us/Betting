@@ -1,6 +1,7 @@
 import React from "react";
 import { Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Img from "../Img/Img";
 import "swiper/css";
 import "swiper/css/pagination";
 import { promo } from "../../constant/promo";
@@ -29,7 +30,11 @@ const Slides = ({ slidesPerView }) => {
                       <p>{promotion.note}</p>
                     </div>
                     <div className="col-6">
-                      <img src={promotion.img} className="img-fluid" alt="" />
+                      <Img
+                        src={promotion.img}
+                        className={"img-fluid"}
+                        alt={promotion.title}
+                      ></Img>
                     </div>
                   </div>
                 </div>
