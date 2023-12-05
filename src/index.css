@@ -50,16 +50,23 @@ textarea {
 }
 
 .bg-gold {
+  box-shadow: 2px 4px 5px #ffc107;
   background: linear-gradient(
-    -145deg,
+    -225deg,
+    #dd9d07,
     #dd9d07,
     #262525,
     #262525,
-    #dd9d07,
+    #262525,
+    #262525,
+    #262525,
+    #262525,
+    #262525,
+    #262525,
     #262525,
     #262525,
     #dd9d07,
-    #262525
+    #dd9d07
   );
 }
 
