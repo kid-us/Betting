@@ -4,13 +4,13 @@ const Swiper = () => {
   return (
     <>
       <div className="d-block d-md-none">
-        <Slides slidesPerView={1}></Slides>{" "}
+        <Slides slidesPerView={1}></Slides>
       </div>
       <div className="d-none d-md-block d-lg-none">
-        <Slides slidesPerView={1}></Slides>{" "}
+        <Slides slidesPerView={1}></Slides>
       </div>
       <div className="d-none d-lg-block">
-        <Slides slidesPerView={2}></Slides>{" "}
+        <Slides slidesPerView={2}></Slides>
       </div>
     </>
   );

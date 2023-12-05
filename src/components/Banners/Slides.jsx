@@ -17,24 +17,26 @@ const Slides = ({ slidesPerView }) => {
         >
           {promo.map((promotion) => (
             <SwiperSlide key={promotion.id}>
-              <div className="row px-3" style={{ height: "210px" }}>
-                <div className="col-12 bg-gold rounded fw-semibold">
-                  <div className="row">
+              <div className="row px-3 fw-semibold">
+                <div className="col-12">
+                  <div className="row bg-gold rounded">
                     <div className="col-6 small">
                       <p className="small mt-3">
                         <span className="bg-secondary px-2 py-1 rounded">
                           Promo
                         </span>
                       </p>
-                      <h4 className="text-warning mt-5 px-1">
+                      <h4 className="text-warning mt-lg-5 px-lg-1">
                         {promotion.title}
                       </h4>
-                      <p className="fs-6 px-1">{promotion.note}</p>
+                      <p className="font-monospace px-lg-1 pt-2 promo-note">
+                        {promotion.note}
+                      </p>
                     </div>
-                    <div className="col-6">
+                    <div className="col-6 py-1">
                       <Img
                         src={promotion.img}
-                        className={"img-fluid"}
+                        className={"promo-img pt-lg-0"}
                         alt={promotion.title}
                       ></Img>
                     </div>

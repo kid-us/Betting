@@ -4,7 +4,12 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Img = ({ src, alt, className }) => {
   return (
-    <LazyLoadImage className={className} effect="blur" src={src} alt={alt} />
+    <LazyLoadImage
+      className={`${className} rounded`}
+      effect="blur"
+      src={src}
+      alt={alt}
+    />
   );
 };
 

@@ -111,7 +111,7 @@ div a {
 /* Swiper PAgination */
 .swiper-pagination {
   position: relative;
-  padding-top: 50px !important;
+  padding-top: 30px !important;
 }
 .swiper-pagination-bullet {
   background-color: white;
@@ -119,4 +119,23 @@ div a {
 .swiper-pagination-bullet-active {
   padding: 3px !important ;
   background-color: #ffc107 !important;
+}
+
+@media (max-width: 576px) {
+  .promo-img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media (min-width: 992px) {
+  .promo-img {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.promo-note {
+  font-size: clamp(13px, 3vw, 16px) !important;
 }
