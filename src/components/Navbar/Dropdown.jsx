@@ -6,22 +6,21 @@ const DashboardDropdown = ({ onLogout }) => {
       <ul className="fw-semibold">
         <li>
           <a href="http://maverickhabesha.com/dashboard.html">
-            <span className="bi-person-fill text-warning"></span> Profile
+            <span className="bi-person-fill text-warning"></span> &nbsp; Profile
           </a>
         </li>
 
         <hr className="my-2" />
         <li>
           <a href="http://maverickhabesha.com/setting.html">
-            <span className="bi-gear-fill text-warning"></span>
-            Setting
+            <span className="bi-gear-fill text-warning"></span> &nbsp; Setting
           </a>
         </li>
 
         <hr className="my-2" />
         <li>
           <a onClick={onLogout} className="cursor">
-            <span className="bi-power text-warning"></span> Logout
+            <span className="bi-power text-warning"></span> &nbsp; Logout
           </a>
         </li>
       </ul>
