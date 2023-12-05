@@ -70,7 +70,7 @@ export const aboutUs = [
     id: 12,
   },
   {
-    title: "Help Centers",
+    title: "Privacy Policy",
     link: "http://maverickhabesha.com/privacy.html",
     id: 13,
   },
