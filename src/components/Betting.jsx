@@ -12,9 +12,20 @@ import SmallSlip from "./Slip/SmallSlip";
 import { upcoming } from "../constant/bet";
 import { champ } from "../constant/bet";
 import { filteredData } from "../constant/bet";
+import useFetch from "../hook/useFetch";
 // import axios from "axios";
-// import { api_key } from "../constant/request";
-// import { api_url } from "../constant/request";
+import {
+  api_key_btts,
+  api_key_h2h,
+  api_key_draw_no_bet,
+  api_key_double_chance,
+  api_key_alternate_spreads,
+  api_key_alternate_totals,
+  api_key_halftime_fulltime,
+  api_key_goal_score,
+  api_key_sports,
+  api_key_upcoming,
+} from "../constant/request";
 
 const Betting = () => {
   const [betsWidth, setBetsWidth] = useState("bet-2");
@@ -23,7 +34,9 @@ const Betting = () => {
   const [showSports, setShowSports] = useState(false);
   const [additionalOdds, setAdditionalOdds] = useState({});
   const [bets, setBets] = useState([]);
+  // Upcoming and Sports
   const [odds, setOdds] = useState([]);
+
   const [loading, setLoading] = useState(true);
   // Url Parameters
   const { key, id } = useParams();
@@ -66,7 +79,6 @@ const Betting = () => {
   useEffect(() => {
     if (!key && !id) {
       setLoading(true);
-
       setTimeout(() => {
         setOdds(upcoming);
         setAdditionalOdds({});
@@ -193,6 +205,7 @@ const Betting = () => {
       setShowSlip(true);
     }
   };
+
   // Clear Bet slip
   const handleClearBets = () => {
     setBets([]);
