@@ -13,6 +13,7 @@ const Bet = ({ onOddsClick, addOnOdds, odds, bets }) => {
         {isAddOnOddsEmpty ? (
           <>
             <Swiper></Swiper>
+            <p className="mb-4 fs-5"> Popular Events</p>
             <DefaultBet
               bets={bets}
               odds={odds}

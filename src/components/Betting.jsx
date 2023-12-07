@@ -72,7 +72,7 @@ const Betting = () => {
         setAdditionalOdds({});
         document.title = "Maverick Habesha Sports Betting";
         setLoading(false);
-      }, 100);
+      }, 4090);
     } else if (key && !id) {
       setLoading(true);
       setTimeout(() => {

@@ -31,7 +31,7 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
   return (
     <>
       <div className="py-3 px-lg-4 p-0 rounded">
-        <p className="text-secondary">{addOnOdds.sport_title}</p>
+        <p className="text-warning">{addOnOdds.sport_title}</p>
         <p className="text-info">
           {addOnOdds.home_team} &nbsp; &nbsp;
           <span className="text-light">vs</span>
