@@ -251,19 +251,19 @@ const Betting = () => {
           </div>
           {/* Bets */}
           <div className={`${betsWidth} bg mt-5 pt-4`}>
-            {loading ? (
+            {/* {loading ? (
               <Loading />
             ) : (
-              <>
-                <Bet
-                  onOddsClick={handleBets}
-                  addOnOdds={additionalOdds}
-                  odds={odds}
-                  bets={bets}
-                ></Bet>
-                <Footer></Footer>
-              </>
-            )}
+              <> */}
+            <Bet
+              onOddsClick={handleBets}
+              addOnOdds={additionalOdds}
+              odds={odds}
+              bets={bets}
+            ></Bet>
+            <Footer></Footer>
+            {/* </>
+            )} */}
           </div>
 
           {/* Slip */}
