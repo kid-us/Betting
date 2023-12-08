@@ -22,7 +22,7 @@ const request = {
 
   // Betting Api
   upcoming: `${api_url}/upcoming/odds/?regions=us&markets=h2h&oddsFormat=decimal&apiKey=${api_key}`,
-  odds: `${api_url}/${sport}/events/${id}/odds?regions=us,uk,us2,eu,au&markets=alternate_totals,alternate_spreads,btts&oddsFormat=decimal&apiKey=${api_key}`,
+  // odds: `${api_url}/${sport}/events/${id}/odds?regions=us,uk,us2,eu,au&markets=alternate_totals,alternate_spreads,btts&oddsFormat=decimal&apiKey=${api_key}`,
 };
 
 export default request;
