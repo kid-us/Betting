@@ -12,7 +12,6 @@ export const api_key_sports = "25728a54910c5eea5d8d85bcfd5b0745";
 
 export const api_key = `374ec93fae94937f2d3a89913136eedd`;
 export const api_url = `https://api.the-odds-api.com/v4/sports`;
-// ("https://api.the-odds-api.com/v4/sports/upcoming/odds/?regions=us&markets=h2h&apiKey=4bee65d9276d270a2ae1ef8edc90b205");
 
 const request = {
   // User Api
