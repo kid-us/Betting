@@ -14,7 +14,7 @@ const Bet = ({
 }) => {
   return (
     <>
-      <div className="fw-semibold small p-lg-3">
+      <div className="fw-semibold small p-lg-3 pt-2">
         {showDefaultBet ? (
           <>
             <Swiper></Swiper>
