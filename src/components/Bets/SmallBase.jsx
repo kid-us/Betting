@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { bet_sports } from "../../constant/Sport";
+import { bet_sports } from "../../constant/sport";
 import slip from "../../assets/bets/slip1.svg";
 
 import "./sport.css";
@@ -62,7 +62,10 @@ const SmallBase = () => {
                     <hr />
                     {sport.top.map((top) => (
                       <li className={`pb-1`} key={top.key}>
-                        <Link to={`/sports/${top.key}`} className="sports">
+                        <Link
+                          to={`/sports/${top.key}?title=${top.title}`}
+                          className="sports"
+                        >
                           {top.title}
                         </Link>
                       </li>

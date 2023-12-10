@@ -22,31 +22,6 @@ import {
 } from "../assets";
 
 export const sidebar = [
-  // {
-  //   title: "S p o r t s",
-  //   link: "/",
-  //   id: 1,
-  //   img: sports,
-  // },
-  // {
-  //   title: "G a m e s",
-  //   link: "http://maverickhabesha.com/games.html",
-  //   id: 2,
-  //   img: game,
-  // },
-  // {
-  //   title: "T o u r n a m e n t s",
-  //   link: "http://maverickhabesha.com/tournaments.html",
-  //   id: 3,
-  //   img: tournament,
-  //   hr: true,
-  // },
-  // {
-  //   title: "W a l l e t",
-  //   id: 4,
-  //   link: "http://maverickhabesha.com/wallet.html",
-  //   img: wallet,
-  // },
   {
     title: "Promotion",
     id: 5,

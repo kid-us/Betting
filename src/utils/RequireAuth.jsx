@@ -6,7 +6,7 @@ const RequireAuth = ({ children }) => {
   const auth = useAuth();
 
   const key =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMTkzNjc0MSwianRpIjoiNWE1ZGJjYTUtOTAxOS00ZTlmLWEwNTctOGI2NTFhOTU3NmE3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImtpZHVzaGgyOUBnbWFpbC5jb20iLCJuYmYiOjE3MDE5MzY3NDEsImV4cCI6MTcwMjE5NTk0MX0.H_GhoGJ8pux93yywDrJrfoBmcr2JznNWpJXjfB95Lto";
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMjIwNjE2MSwianRpIjoiZWNiMzc3OGQtZDI2YS00ZDMyLTg2ZGItYzMyNjgxOWY3ZTM0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImtpZHVzaGgyOUBnbWFpbC5jb20iLCJuYmYiOjE3MDIyMDYxNjEsImV4cCI6MTcwMjQ2NTM2MX0.KqrmwRyKrM1Cgu2neD5GvPHcZjflIxlyJScfCbwPcTY";
 
   useEffect(() => {
     axios

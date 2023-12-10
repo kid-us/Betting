@@ -1,42 +1,67 @@
 import React from "react";
-import {
-  load_ball,
-  load_basketball,
-  load_die,
-  load_mine,
-  load_nine,
-  load_spades,
-} from "../../assets";
+import { Player } from "@lottiefiles/react-lottie-player";
 
-import "./loader.css";
-
-const Loading = () => {
+const Loading = ({ width }) => {
   return (
-    <div id="preloader">
-      <div className="loader1">
-        <img className="element element1" src={load_mine} width={"50px"} />
-        <img className="element element2" src={load_nine} width={"50px"} />
+    <>
+      {/* Large Device */}
+      <div className="d-none d-md-block">
+        <div
+          className="rounded"
+          style={{
+            position: "fixed",
+            height: "100vh",
+            width: width,
+            backgroundColor: "#252525",
+            zIndex: "9999",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Player
+            autoplay={true}
+            loop={true}
+            controls={false}
+            src="https://lottie.host/c7bbeb12-b6fe-456a-9922-eea74f7f9347/2aVcd9g69V.json"
+            style={{
+              height: "700px",
+              width: "400px",
+            }}
+          ></Player>
+        </div>
       </div>
-
-      <div className="loader2">
-        <img className="element element1 img2" src={load_ball} width={"50px"} />
-        <img
-          className="element element2 img5"
-          src={load_basketball}
-          width={"50px"}
-        />
+      {/* Small Device */}
+      <div className="d-block d-md-none">
+        <div
+          className="rounded"
+          style={{
+            position: "fixed",
+            height: "87.5vh",
+            bottom: "5px",
+            left: "4px",
+            right: "40px",
+            width: "98%",
+            backgroundColor: "#252525",
+            zIndex: "9999",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Player
+            autoplay={true}
+            loop={true}
+            controls={false}
+            src="https://lottie.host/c7bbeb12-b6fe-456a-9922-eea74f7f9347/2aVcd9g69V.json"
+            style={{
+              height: "700px",
+              width: "400px",
+            }}
+          ></Player>
+        </div>
       </div>
-
-      <div className="loader3">
-        <img
-          className="element element1 img3"
-          src={load_spades}
-          width={"50px"}
-        />
-        <img className="element element2 img" src={load_die} width={"50px"} />
-      </div>
-    </div>
+    </>
   );
 };
-
 export default Loading;

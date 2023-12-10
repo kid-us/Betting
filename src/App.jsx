@@ -12,7 +12,7 @@ function App() {
       <AuthProvider>
         <RequireAuth>
           <Routes>
-            <Route path="/" exact element={<Betting></Betting>}></Route>
+            {/* <Route path="/" exact element={<Betting></Betting>}></Route> */}
             <Route
               path="/sports/:key"
               exact
@@ -25,11 +25,11 @@ function App() {
               element={<Betting></Betting>}
             ></Route>
 
-            <Route
+            {/* <Route
               path="sports/home"
               exact
               element={<Betting></Betting>}
-            ></Route>
+            ></Route> */}
           </Routes>
         </RequireAuth>
       </AuthProvider>

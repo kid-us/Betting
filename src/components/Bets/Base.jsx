@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { bet_sports } from "../../constant/Sport";
+import { bet_sports } from "../../constant/sport";
 import Sidebar from "../Sidebar/SIdebar";
 import TopSidebar from "../Sidebar/TopSidebars";
 import "./sport.css";
@@ -16,14 +16,6 @@ const Base = () => {
     }
   };
 
-  // const handleDropdown = () => {
-  //   console.log("clicked");
-  //   if (clicked === false) {
-  //     setClicked(true);
-  //   } else {
-  //     setClicked(false);
-  //   }
-  // };
   return (
     <>
       <div
@@ -64,9 +56,8 @@ const Base = () => {
                     {sport.top.map((top) => (
                       <li className={`pb-1`} key={top.key}>
                         <Link
-                          to={`/sports/${top.key}`}
+                          to={`/sports/${top.key}?title=${top.title}`}
                           className="sports"
-                          // onClick={() => onSelect(top.key)}
                         >
                           {top.title}
                         </Link>

@@ -14,11 +14,6 @@ export const bet_sports = [
     key: "soccer",
     group: "Soccer",
     top: [
-      // {
-      //   title: "Upcoming",
-      //   key: "upcoming",
-      // },
-
       {
         title: "Premier League",
         key: "soccer_epl",
@@ -235,20 +230,11 @@ export const bet_sports = [
     group: "Basketball",
     img: basketball,
     top: [
-      // {
-      //   title: "Upcoming",
-      //   key: "upcoming",
-      // },
       {
         title: "NBA",
         key: "basketball_nba",
         description: "US Basketball",
       },
-      // {
-      //   title: "NBA Championship",
-      //   key: "basketball_nba_championship_winner",
-      //   description: "Championship Winner 2023/2024",
-      // },
     ],
   },
 
@@ -258,10 +244,6 @@ export const bet_sports = [
     group: "American Football",
     description: "US Football",
     top: [
-      // {
-      //   title: "Upcoming",
-      //   key: "upcoming",
-      // },
       { title: "NFL", key: "americanfootball_nfl", description: "US Football" },
     ],
     img: american,
@@ -272,10 +254,6 @@ export const bet_sports = [
     key: "boxing",
     group: "Boxing",
     top: [
-      // {
-      //   title: "Upcoming",
-      //   key: "upcoming",
-      // },
       { title: "Boxing", key: "boxing_boxing", description: "Boxing Bouts" },
     ],
     img: boxing,
@@ -287,10 +265,6 @@ export const bet_sports = [
     group: "Mixed Martial Arts",
     title: "MMA",
     top: [
-      // {
-      //   title: "Upcoming",
-      //   key: "upcoming",
-      // },
       {
         title: "MMA",
         key: "mma_mixed_martial_arts",
@@ -305,16 +279,60 @@ export const bet_sports = [
     key: "cricket",
     group: "Cricket",
     top: [
-      // {
-      //   title: "Upcoming",
-      //   key: "upcoming",
-      // },
       {
-        title: "Big Bash",
-        key: "cricket_big_bash",
-        description: "Big Bash League",
+        title: "International Twenty",
+        key: "cricket_international_t20",
+        description: "International Twenty20",
       },
     ],
     img: cricket,
   },
+];
+
+export const supported_sports = [
+  { key: "cricket_international_t20" },
+  {
+    key: "mma_mixed_martial_arts",
+  },
+  { key: "boxing_boxing" },
+  { key: "americanfootball_nfl" },
+  { key: "basketball_nba" },
+  { key: "soccer_epl" },
+  { key: "soccer_turkey_super_league" },
+  { key: "soccer_switzerland_superleague" },
+  { key: "soccer_spain_segunda_division" },
+  { key: "soccer_poland_ekstraklasa" },
+  { key: "soccer_norway_eliteserien" },
+  { key: "soccer_mexico_ligamx" },
+  { key: "soccer_korea_kleague1" },
+  { key: "soccer_japan_j_league" },
+  { key: "soccer_italy_serie_b" },
+  { key: "soccer_greece_super_league" },
+  { key: "soccer_germany_liga3" },
+  { key: "soccer_germany_bundesliga2" },
+  { key: "soccer_france_ligue_two" },
+  { key: "soccer_england_league2" },
+  { key: "soccer_england_league1" },
+  {
+    key: "soccer_denmark_superliga",
+  },
+  { key: "soccer_chile_campeonato" },
+  { key: "soccer_brazil_campeonato" },
+  { key: "soccer_belgium_first_div" },
+  { key: "soccer_austria_bundesliga" },
+  { key: "soccer_australia_aleague" },
+  { key: "soccer_usa_mls" },
+  { key: "soccer_fa_cup" },
+  { key: "soccer_efl_champ" },
+  { key: "soccer_spl" },
+  { key: "soccer_netherlands_eredivisie" },
+  { key: "soccer_portugal_primeira_liga" },
+  { key: "soccer_uefa_europa_league" },
+  { key: "soccer_uefa_europa_conference_league" },
+  { key: "soccer_uefa_euro_qualification" },
+  { key: "soccer_uefa_champs_league" },
+  { key: "soccer_france_ligue_one" },
+  { key: "soccer_italy_serie_a" },
+  { key: "soccer_germany_bundesliga" },
+  { key: "soccer_spain_la_liga" },
 ];

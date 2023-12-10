@@ -202,15 +202,33 @@ div a {
   width: 17.5% !important;
 }
 
-.bet-2 {
-  width: 82.5% !important;
+@media (min-width: 992px) {
+  .bet-2 {
+    max-width: 82.5% !important;
+  }
 }
 
-@media (max-width: 575.98px) {
+@media (min-width: 576px) {
   .bet-2 {
     width: 100% !important;
   }
 }
+/* @media (max-width: 575.98px) {
+  .bet-2 {
+    max-width: 100% !important;
+  }
+} */
+@media (min-width: 768px) {
+  .bet-2 {
+    width: 100% !important;
+  }
+}
+
+/* @media (min-width: 767.98px) {
+  .bet-2 {
+    max-width: 100% !important;
+  }
+} */
 
 .slip-2 {
   width: 25% !important;
@@ -237,6 +255,7 @@ div a {
 .slide-4 {
   width: 100% !important;
 }
+
 /* Navbar */
 #navbar {
   position: fixed;

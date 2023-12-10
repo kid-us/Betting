@@ -1,18 +1,30 @@
-// New Api Keys
-export const api_key_btts = "10f3043329ed5c0b6cb28bc51611d655";
-export const api_key_h2h = "64e9726a47828a362ef98e7958fbc038";
-export const api_key_alternate_spreads = "69a60c8ec2e7fd8ce0b6b0297b045625";
-export const api_key_alternate_totals = "d507c30414a2a08c3c06232656d4f256";
-export const api_key_draw_no_bet = "ea0dea85dc4d0b86913fa5b4c8e0b114";
-export const api_key_double_chance = "f21898ece3b2e202233fd31648189f89";
-export const api_key_halftime_fulltime = "7e59186032c667266ddf88a15b9ce6f2";
-export const api_key_goal_score = "7944748b04376250c9cfb296ba57c484";
-export const api_key_upcoming = "587502f59a87bcbb19973dc387c08c54";
-export const api_key_sports = "25728a54910c5eea5d8d85bcfd5b0745";
+// ############ NEW #############
+// const api_key_upcoming = "a3ba56b3e6d90020db675eabec7833ab";
+// const api_key_sports = "b3d173b528f5355f3ddf26b87cfd8b83";
+// // More Odds
+// const api_key_h2h = "64d490df04d29443d3274b5303dc3477";
+// const api_key_btts = "f1ae8e96ffcf24c56551ffc98948f8c1";
+// const api_key_draw_no_bet = "6c6892c8bac9b123a62723d97c4b3631";
+// const api_key_double_chance = "b1efe9a109543460c0869318ab3e7d3a";
+// const api_key_first_half = "b736216ed22f754d3f9b3265af167385";
+// const api_key_second_half = "297dad8259ec68bf5df9fbc1fc226c32";
+// const api_key_alternate_totals = "a05115925350effe2c98ddf5d4387205";
+// const api_key_alternate_spreads = "7dd5285b7d0dea60424fd88a6bc4d82d";
 
-export const api_key = `374ec93fae94937f2d3a89913136eedd`;
-export const api_url = `https://api.the-odds-api.com/v4/sports`;
-// ("https://api.the-odds-api.com/v4/sports/upcoming/odds/?regions=us&markets=h2h&apiKey=4bee65d9276d270a2ae1ef8edc90b205");
+// Default View
+const api_key_upcoming = "ea093c72e68fc8504f9cf80bd89f36bd";
+const api_key_sports = "25728a54910c5eea5d8d85bcfd5b0745";
+// More Odds
+const api_key_h2h = "ea093c72e68fc8504f9cf80bd89f36bd";
+const api_key_btts = "12e12340e5ddc57720496d61155fc1a4";
+const api_key_draw_no_bet = "ea0dea85dc4d0b86913fa5b4c8e0b114";
+const api_key_double_chance = "f21898ece3b2e202233fd31648189f89";
+const api_key_first_half = "64e9726a47828a362ef98e7958fbc038";
+const api_key_second_half = "7e59186032c667266ddf88a15b9ce6f2";
+const api_key_alternate_totals = "4886d71a33f12288f86f578c1e864bbe";
+const api_key_alternate_spreads = "77e5365e4e5651cfbc4498c9439e8f7b";
+
+const api_url = `https://api.the-odds-api.com/v4/sports`;
 
 const request = {
   // User Api
@@ -21,131 +33,17 @@ const request = {
   getUserBalance: "https://api.maverickhabesha.com/api/v1/balance/get-balance",
 
   // Betting Api
-  upcoming: `${api_url}/upcoming/odds/?regions=us&markets=h2h&oddsFormat=decimal&apiKey=${api_key}`,
-  odds: `${api_url}/${sport}/events/${id}/odds?regions=us,uk,us2,eu,au&markets=alternate_totals,alternate_spreads,btts&oddsFormat=decimal&apiKey=${api_key}`,
+  upcoming_odds: `${api_url}/upcoming/odds/?regions=us&markets=h2h&oddsFormat=decimal&apiKey=${api_key_upcoming}`,
+  sport_with_key: `/odds?regions=us&markets=h2h&oddsFormat=decimal&apiKey=${api_key_sports}`,
+  h2h: `/odds?regions=us&&markets=h2h_3_way&oddsFormat=decimal&apiKey=${api_key_h2h}`,
+  btts: `/odds?regions=us&markets=btts&oddsFormat=decimal&apiKey=${api_key_btts}`,
+  draw: `/odds?regions=us&markets=draw_no_bet&oddsFormat=decimal&apiKey=${api_key_draw_no_bet}`,
+  double: `/odds?regions=us&markets=double_chance&oddsFormat=decimal&apiKey=${api_key_double_chance}`,
+  first_half: `/odds?regions=us&markets=h2h_h1&oddsFormat=decimal&apiKey=${api_key_first_half}`,
+  second_half: `/odds?regions=us&markets=h2h_h2&oddsFormat=decimal&apiKey=${api_key_second_half}`,
+  totals: `/odds?regions=eu&markets=alternate_totals&oddsFormat=decimal&apiKey=${api_key_alternate_totals}`,
+  spreads: `/odds?regions=eu&markets=alternate_spreads&oddsFormat=decimal&apiKey=${api_key_alternate_spreads}`,
+  // API
+  api_url: `https://api.the-odds-api.com/v4/sports`,
 };
-
 export default request;
-
-[
-  {
-    id: "bfadd52d01868e303a95a1772a657916",
-    sport_key: "soccer_turkey_super_league",
-    sport_title: "Turkey Super League",
-    commence_time: "2023-11-27T17:00:00Z",
-    home_team: "Basaksehir",
-    away_team: "Pendikspor",
-    bookmakers: [
-      {
-        key: "mybookieag",
-        title: "MyBookie.ag",
-        last_update: "2023-11-27T10:47:02Z",
-        markets: [
-          {
-            key: "h2h",
-            last_update: "2023-11-27T10:47:02Z",
-            outcomes: [
-              {
-                name: "Basaksehir",
-                price: 1.8,
-              },
-              {
-                name: "Pendikspor",
-                price: 4.4,
-              },
-              {
-                name: "Draw",
-                price: 3.65,
-              },
-            ],
-          },
-        ],
-      },
-      {
-        key: "draftkings",
-        title: "DraftKings",
-        last_update: "2023-11-27T10:45:54Z",
-        markets: [
-          {
-            key: "h2h",
-            last_update: "2023-11-27T10:45:54Z",
-            outcomes: [
-              {
-                name: "Basaksehir",
-                price: 1.8,
-              },
-              {
-                name: "Pendikspor",
-                price: 4.3,
-              },
-              {
-                name: "Draw",
-                price: 3.7,
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "d25213be89ddf3c8a00f3cd8ed7ee943",
-    sport_key: "soccer_turkey_super_league",
-    sport_title: "Turkey Super League",
-    commence_time: "2023-11-27T17:00:00Z",
-    home_team: "Sivasspor",
-    away_team: "Trabzonspor",
-    bookmakers: [
-      {
-        key: "bovada",
-        title: "Bovada",
-        last_update: "2023-11-27T10:45:45Z",
-        markets: [
-          {
-            key: "h2h",
-            last_update: "2023-11-27T10:45:45Z",
-            outcomes: [
-              {
-                name: "Sivasspor",
-                price: 2.9,
-              },
-              {
-                name: "Trabzonspor",
-                price: 2.3,
-              },
-              {
-                name: "Draw",
-                price: 3.25,
-              },
-            ],
-          },
-        ],
-      },
-      {
-        key: "mybookieag",
-        title: "MyBookie.ag",
-        last_update: "2023-11-27T10:47:02Z",
-        markets: [
-          {
-            key: "h2h",
-            last_update: "2023-11-27T10:47:02Z",
-            outcomes: [
-              {
-                name: "Sivasspor",
-                price: 2.95,
-              },
-              {
-                name: "Trabzonspor",
-                price: 2.32,
-              },
-              {
-                name: "Draw",
-                price: 3.4,
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-];

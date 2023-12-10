@@ -3,7 +3,7 @@ import { sports, game, slip } from "../assets";
 const MenuBar = ({ bets, onClick, onShowSport }) => {
   return (
     <>
-      <div className="menu-bar w-100 d-block d-md-none">
+      <div className="menu-bar w-100 d-block d-lg-none">
         <div className="row text-center fw-semibold pb-0 shadow-lg bg text-black border-top border-secondary">
           <div className="col-4 text-warning" onClick={onShowSport}>
             <img src={sports} width={"18px"} alt="" />

@@ -25,7 +25,7 @@ const Large = ({ user, balance }) => {
     <>
       <div className="d-none d-md-block">
         <div className="float-start">
-          <Link to={"/sports/home"} className="navbar-brand ps-5">
+          <Link to="/sports/home" className="navbar-brand ps-3">
             <img src={logo} alt="logo" width="120px" />
           </Link>
         </div>
@@ -43,7 +43,7 @@ const Large = ({ user, balance }) => {
               to="http://maverickhabesha.com/wallet.html"
               className="wallet bg py-1 rounded"
             >
-              <span id="user-balance" className="px-3 small">
+              <span id="user-balance" className="px-2 small">
                 {balance} ETB
               </span>
 
@@ -54,14 +54,14 @@ const Large = ({ user, balance }) => {
           </span>
 
           {navbar.map((nav) => (
-            <Link key={nav.title} to={nav.link} className="ms-5">
+            <Link key={nav.title} to={nav.link} className="ms-lg-5 ms-3">
               <img src={nav.img} alt="" width="20px" /> {nav.title}
             </Link>
           ))}
 
           <span
             onClick={() => handleModal()}
-            className="cursor bi bi-person-fill text-warning ms-5"
+            className="cursor bi bi-person-fill text-warning ms-lg-5 ms-3"
           >
             <span id="user-name"></span>
             &nbsp;{user} &nbsp;

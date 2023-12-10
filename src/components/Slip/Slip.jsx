@@ -31,8 +31,8 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
         </div>
         <div className="px-4 bets-container bg pt-4">
           {bets.length > 0 ? (
-            bets.map((bet) => (
-              <div key={bet.id} className="row bet-slip bg2 rounded pt-2 mb-3">
+            bets.map((bet, index) => (
+              <div key={index} className="row bet-slip bg2 rounded pt-2 mb-3">
                 <div className="col-11 small">
                   <p>
                     {bet.home} <span className="text-info mx-3">vs</span>
