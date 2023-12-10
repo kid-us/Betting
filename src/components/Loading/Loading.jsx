@@ -37,7 +37,7 @@ const Loading = ({ width }) => {
           className="rounded"
           style={{
             position: "fixed",
-            height: "87.5vh",
+            height: "85.5vh",
             bottom: "5px",
             left: "4px",
             right: "40px",
