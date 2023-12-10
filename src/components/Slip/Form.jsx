@@ -27,7 +27,7 @@ const Form = ({ bets }) => {
         style={{ lineHeight: "10px" }}
       >
         <div className="row">
-          <div className="col-8 text-secondary small text-uppercase">
+          <div className="col-8 text-info small text-uppercase">
             <p>Total Odds </p>
           </div>
           <div className="col-4">
@@ -36,7 +36,7 @@ const Form = ({ bets }) => {
             </p>
           </div>
 
-          <div className="col-8 text-secondary small text-uppercase">
+          <div className="col-8 text-info small text-uppercase">
             <p>Est. Payout </p>
           </div>
           <div className="col-4">
