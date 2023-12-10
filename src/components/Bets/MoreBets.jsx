@@ -28,7 +28,7 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
   };
 
   return (
-    <div className="py-3 px-lg-4 p-0 rounded">
+    <div className="py-3 px-lg-4 p-2 rounded">
       {/* Head to Head */}
       {addOnOdds.h2h && addOnOdds.h2h.bookmakers.length > 0 && (
         <>
