@@ -25,9 +25,9 @@ const Small = ({ user, balance }) => {
       <div className="d-block d-md-none">
         <div className="row justify-content-between px-2">
           <div className="col-2">
-            <a className="navbar-brand" href="index.html">
+            <Link to="/sports/home" className="navbar-brand">
               <img src={logo} alt="logo" width="50px" />
-            </a>
+            </Link>
           </div>
 
           <div className="col-8 mt-2">
