@@ -40,12 +40,12 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
               <p className="text-warning ">{game.sport_title}</p>
               <hr className="p-0 text-secondary" />
               <div className="row justify-content-between">
-                <div className="col-lg-10 col-6">
+                <div className="col-lg-10 col-7">
                   <p className="small text-info">
                     {formatCommenceTime(game.commence_time)}
                   </p>
                 </div>
-                <div className="col-lg-2 col-6">
+                <div className="col-lg-2 col-5">
                   <Link
                     to={`/sports/${game.sport_key}/${game.id}`}
                     className="text-info bi-plus-lg font-monospace"
