@@ -49,7 +49,7 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
                   <Link
                     to={`/sports/${game.sport_key}/${game.id}`}
                     className="text-info bi-plus-lg font-monospace"
-                  ></Link>
+                  >&nbsp;Side Bets</Link>
                 </div>
               </div>
 
