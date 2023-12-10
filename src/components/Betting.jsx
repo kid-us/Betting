@@ -48,6 +48,7 @@ const Betting = () => {
           );
           document.title = "Maverick Habesha Sports Betting";
           // Set Data to the Sates
+          setSportTitle("Popular Events");
           setOdds(filteredData);
           setViewDefaultBet(true);
           setLoading(false);
@@ -130,7 +131,6 @@ const Betting = () => {
             };
             document.title = `${moreOdds.btts.home_team} vs ${moreOdds.btts.away_team}`;
             // Set Data to the Sates
-            console.log("lorem");
             if (
               btts.bookmakers.length === 0 &&
               spreads.bookmakers.length === 0 &&
