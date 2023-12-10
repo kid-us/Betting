@@ -12,7 +12,7 @@ function App() {
       <AuthProvider>
         <RequireAuth>
           <Routes>
-            {/* <Route path="/" exact element={<Betting></Betting>}></Route> */}
+            <Route path="/" exact element={<Betting></Betting>}></Route>
             <Route
               path="/sports/:key"
               exact
