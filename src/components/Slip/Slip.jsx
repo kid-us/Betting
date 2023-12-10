@@ -49,12 +49,11 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
                     x
                   </p>
                 </div>
-                <p className="small ms12 text-secondary">{bet.commence_time}</p>
+                <p className="small ms12 text-info">{bet.commence_time}</p>
                 <div className="col-9 ps-4">
                   <p className="text-warning fs-6">
                     {bet.name}
                     <span className="small text-white font-monospace">
-                      {" "}
                       {bet.point}
                     </span>
                   </p>
