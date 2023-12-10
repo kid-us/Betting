@@ -154,7 +154,7 @@ const Betting = () => {
     };
 
     fetchData();
-  }, [id, key]);b
+  }, [id, key]);
 
   // User Bets
   const handleBets = (
