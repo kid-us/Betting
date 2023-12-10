@@ -29,7 +29,7 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
   };
 
   return (
-    <div className="mt-3">
+    <div className="mt-3 p-2">
       {odds.map(
         (game) =>
           game.bookmakers.length > 0 && (
