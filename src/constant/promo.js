@@ -4,6 +4,7 @@ import {
   promoSoccer,
   promoNfl,
   promoUfc,
+  promoBoxing,
 } from "../assets";
 
 export const promo = [
@@ -37,5 +38,11 @@ export const promo = [
     title: "NBA",
     note: "Bet on your favorite teams and win Prizes",
     img: promoNba,
+  },
+  {
+    id: 6,
+    title: "Boxing",
+    note: "Bet on your Favorite Boxers with the best Odd on the Market",
+    img: promoBoxing,
   },
 ];
