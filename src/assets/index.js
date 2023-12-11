@@ -34,6 +34,7 @@ import promoCricket from "./cricket.jpg";
 import promoNba from "./nba.jpg";
 import promoUfc from "./ufc.jpg";
 import promoNfl from "./nfl.jpg";
+import promoBoxing from "./box.jpg";
 //
 import browse from "./browse.png";
 
@@ -73,6 +74,7 @@ export {
   promoNba,
   promoNfl,
   promoUfc,
+  promoBoxing,
   //
   browse,
 };
