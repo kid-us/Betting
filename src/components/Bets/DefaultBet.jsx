@@ -45,7 +45,7 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
                     {formatCommenceTime(game.commence_time)}
                   </p>
                 </div>
-                <div className="col-lg-2 col-5">
+                <div className="col-lg-2 col-5 text-end">
                   <Link
                     to={`/sports/${game.sport_key}/${game.id}`}
                     className="text-warning bi-plus-lg font-monospace"
