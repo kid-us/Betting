@@ -16,7 +16,7 @@ export const sports = [
   { img: american, title: "American Football" },
   // { img: golf, title: "Golf" },
   { img: cricket, title: "Cricket" },
-  { img: rugby, title: "Rugby" },
+  // { img: rugby, title: "Rugby" },
   { img: mma, title: "Mixed Martial Arts" },
   { img: ice_hockey, title: "Ice Hockey" },
   { img: boxing, title: "Boxing" },
