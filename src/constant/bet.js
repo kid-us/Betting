@@ -18,6 +18,6 @@ export const sports = [
   { img: cricket, title: "Cricket" },
   // { img: rugby, title: "Rugby" },
   { img: mma, title: "Mixed Martial Arts" },
-  { img: ice_hockey, title: "Ice Hockey" },
+  // { img: ice_hockey, title: "Ice Hockey" },
   { img: boxing, title: "Boxing" },
 ];
