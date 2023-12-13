@@ -238,7 +238,7 @@ export const bet_sports = [
     ],
   },
 
-  // American
+  // American NFL
   {
     key: "americanfootball",
     group: "American Football",
