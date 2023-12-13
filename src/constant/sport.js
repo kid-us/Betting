@@ -249,7 +249,7 @@ export const bet_sports = [
     img: american,
   },
 
-  // Boxing
+  // Boxing Box
   {
     key: "boxing",
     group: "Boxing",
