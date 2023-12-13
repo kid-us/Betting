@@ -259,7 +259,7 @@ export const bet_sports = [
     img: boxing,
   },
 
-  // MMA
+  // MMA UFC
   {
     key: "ufc",
     group: "Mixed Martial Arts",
