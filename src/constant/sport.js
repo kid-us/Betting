@@ -9,7 +9,7 @@ import {
 } from "../assets";
 
 export const bet_sports = [
-  // Soccer
+  // Football / Soccer
   {
     key: "soccer",
     group: "Soccer",
@@ -224,7 +224,7 @@ export const bet_sports = [
     img: soccer,
   },
 
-  // Basketball
+  // Basketball (NBA)
   {
     key: "basketball",
     group: "Basketball",
