@@ -5,7 +5,7 @@ import axios from "axios";
 const RequireAuth = ({ children }) => {
   const auth = useAuth();
 
-  const key ="eyJhbGciOiJIUzsInN1YiI6ImtpZHVzaGgyOUBnbWFpbC5jb20iLCJuYmYiOjE3MDIyMDcwNTcsImV4cCI6MTcwMjQ2NjI1N30.cxwNCp8-Z6W0q2qvLqigdEUVp0C69wPCw1mDN374-cU";
+  const key ="eyJhbGciOiJ-Z6W0q2qvLqigdEUVp0C69wPCw1mDN374-cU";
   useEffect(() => {
     axios
       .get(request.getCurrentUser, {
