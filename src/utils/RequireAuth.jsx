@@ -5,7 +5,7 @@ import axios from "axios";
 const RequireAuth = ({ children }) => {
   const auth = useAuth();
 
-  const key ="eyJhbGciOiJ-Z6W0q2qvLqigdEUVp0C69wPCw1mDN374-cU";
+  const key ="U";
   useEffect(() => {
     axios
       .get(request.getCurrentUser, {
