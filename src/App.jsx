@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { AuthProvider } from "./utils/Auth";
-import RequireAuth from "./utils/RequireAuth";
+// import { AuthProvider } from "./utils/Auth";
+// import RequireAuth from "./utils/RequireAuth";
 import Betting from "./components/Betting";
 import { Route, Routes } from "react-router-dom";
 import "animate.css";
