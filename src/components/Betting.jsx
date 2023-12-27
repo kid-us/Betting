@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import Support from "./Support";
-// import Navbar from "./Navbar";
+import Navbar from "./Navbar";
 import Base from "./Bets/Base";
 import SmallBase from "./Bets/SmallBase";
 import Bet from "./Bets/Bet";
