@@ -9,7 +9,7 @@ import "animate.css";
 function App() {
   return (
     <>
-      <AuthProvider></Auth>
+      <AuthProvider></AuthProvider>
           <Routes>
             <Route path="/" exact element={<Betting></Betting>}></Route>
             <Route
