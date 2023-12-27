@@ -270,7 +270,7 @@ const Betting = () => {
   };
   return (
     <>
-{/*       <Navbar></Navbar> */}
+      <Navbar></Navbar>
       <MenuBar
         bets={bets}
         onShowSport={handleShowSport}
