@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <AuthProvider>
-      <RequireAuth>
+        <RequireAuth>
           <Routes>
             <Route path="/" exact element={<Betting></Betting>}></Route>
             <Route
@@ -32,7 +32,7 @@ function App() {
             ></Route> */}
           </Routes>
       
-      </RequireAuth>
+        </RequireAuth>
       </AuthProvider>
     </>
   );
