@@ -1,6 +1,6 @@
 // Default View
 const api_key_upcoming = "a3ba56b3e6d90020db675eabec7833ab";
-// const api_key_sports = "b3d173b528f5355f3ddf26b87cfd8b83";
+const api_key_sports = "b3d173b528f5355f3ddf26b87cfd8b83";
 // More Odds
 const api_key_h2h = "64d490df04d29443d3274b5303dc3477";
 const api_key_btts = "f1ae8e96ffcf24c56551ffc98948f8c1";
