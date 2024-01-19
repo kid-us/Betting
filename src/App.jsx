@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { AuthProvider } from "./utils/Auth";
-import RequireAuth from "./utils/RequireAuth";
+import { AuthProvider } from "./context/AuthenticateUser";
+import RequireAuth from "./context/RequireAuth";
 import Betting from "./components/Betting";
+import MyBets from "./components/MyBets";
 import { Route, Routes } from "react-router-dom";
 import "animate.css";
 function App() {
@@ -25,13 +26,14 @@ function App() {
               element={<Betting></Betting>}
             ></Route>
 
-            {/* <Route
-              path="sports/home"
+            <Route path="/slips"></Route>
+
+            <Route
+              path="sports/my-bets"
               exact
-              element={<Betting></Betting>}
-            ></Route> */}
+              element={<MyBets></MyBets>}
+            ></Route>
           </Routes>
-      
         </RequireAuth>
       </AuthProvider>
     </>

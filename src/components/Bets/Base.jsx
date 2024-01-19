@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { bet_sports } from "../../constant/sport";
 import Sidebar from "../Sidebar/SIdebar";
 import TopSidebar from "../Sidebar/TopSidebars";
+import { home, game, sports } from "../../assets";
 import "./sport.css";
 
 const Base = () => {
@@ -22,9 +23,7 @@ const Base = () => {
         className={`side-2 container sidebar-wrapper pt-5 fw-semibold shadow-lg`}
       >
         <hr />
-
         <TopSidebar></TopSidebar>
-
         <div className="row justify-content-center ps-1 bg py-3 rounded ">
           <p className="small ">Top Sports</p>
           <hr />
@@ -51,25 +50,26 @@ const Base = () => {
               {/* Sports */}
               <div className="small">
                 {visibleSports.includes(sport.key) && (
-                  <ul className="animate__animated animate__fadeIn">
+                  <div className="animate__animated animate__fadeIn">
                     <hr />
                     {sport.top.map((top) => (
                       <li className={`pb-1`} key={top.key}>
                         <Link
                           to={`/sports/${top.key}?title=${top.title}`}
-                          className="sports"
+                          className="sports "
                         >
-                          {top.title}
+                          <p className="bg-warning w-100 rounded p-2 text-black mb-1">
+                            {top.title}
+                          </p>
                         </Link>
                       </li>
                     ))}
-                  </ul>
+                  </div>
                 )}
               </div>
             </div>
           ))}
         </div>
-
         <Sidebar></Sidebar>
       </div>
     </>

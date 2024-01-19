@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logolight1.png";
 import { navbar } from "../../constant/nav";
 import Dropdown from "./Dropdown";
-import { useAuth } from "../../utils/Auth";
+import { useAuth } from "../../context/AuthenticateUser";
 
 const Large = ({ user, balance }) => {
   const auth = useAuth();
@@ -25,7 +25,7 @@ const Large = ({ user, balance }) => {
     <>
       <div className="d-none d-md-block">
         <div className="float-start">
-          <Link to="/sports/home" className="navbar-brand ps-3">
+          <Link to="/sports/home" className="navbar-brand ps-5">
             <img src={logo} alt="logo" width="120px" />
           </Link>
         </div>

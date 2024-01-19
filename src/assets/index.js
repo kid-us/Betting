@@ -8,7 +8,7 @@ import guide from "./guide.png";
 import faq from "./faq.png";
 import like from "./like.png";
 import logo1 from "./logolight1.png";
-import logo2 from "./logo2.png";
+import logo2 from "./logo.png";
 // Bet
 import soccer from "./bets/soccer.svg";
 import american from "./bets/american.svg";
@@ -20,6 +20,7 @@ import basketball from "./bets/basketball.svg";
 import rugby from "./bets/helmet.svg";
 import mma from "./bets/mma.svg";
 import slip from "./bets/slip1.svg";
+import slip2 from "./bets/slip.svg";
 // Loading
 import load_basketball from "./Loading/basketball.png";
 import load_die from "./Loading/die.png";
@@ -61,6 +62,7 @@ export {
   rugby,
   mma,
   slip,
+  slip2,
   // Loading
   load_basketball,
   load_die,

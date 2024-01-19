@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo2 from "../../assets/logo2.png";
-import game from "../../assets/dice.png";
-import tournament from "../../assets/trophy.png";
+import { logo2, game, tournament } from "../../assets";
 import "animate.css";
 const SmallMenu = ({ username, onClick, onLogout }) => {
   // const menus = [
@@ -36,7 +34,7 @@ const SmallMenu = ({ username, onClick, onLogout }) => {
     <>
       <div className="sm-navbar">
         <div className="menu animate__animated animate__bounceInLeft">
-          <div className="float-start">
+          <div className="float-start ps-5">
             <img src={logo2} height="70px" />
           </div>
           <div className="float-end pt-3">
@@ -50,7 +48,7 @@ const SmallMenu = ({ username, onClick, onLogout }) => {
               <p className="pt-4 pb-3 fw-semibold bi bi-person-fill fs-1 text-warning">
                 <span> {username} </span>
               </p>
-
+              <hr />
               <li>
                 <Link
                   to="http://maverickhabesha.com/dashboard.html"
@@ -60,7 +58,6 @@ const SmallMenu = ({ username, onClick, onLogout }) => {
                   Profile
                 </Link>
               </li>
-
               <li>
                 <Link
                   to="http://maverickhabesha.com/tournaments.html"
@@ -87,9 +84,7 @@ const SmallMenu = ({ username, onClick, onLogout }) => {
                   <span className="bi-gear-fill text-warning"></span> Setting
                 </Link>
               </li>
-
               <hr className="my-2" />
-
               <li>
                 <Link onClick={onLogout} className="fs-4 fw-semibold">
                   <span className="bi-power text-warning"></span> Logout

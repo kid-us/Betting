@@ -4,27 +4,14 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
   const isBetSelected = (id, key, name, odd) => {
     for (let i = 0; i < bets.length; i++) {
       const f =
-        bets[i].id === id &&
-        bets[i].key === key &&
-        bets[i].name === name &&
+        bets[i].event_id === id &&
+        bets[i].bet_market === key &&
+        bets[i].chosen_team === name &&
         bets[i].odd === odd;
       if (f) {
         return f;
       }
     }
-  };
-
-  const formatCommenceTime = (commenceTime) => {
-    const options = {
-      month: "long",
-      day: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-    };
-
-    return new Intl.DateTimeFormat("en-UK", options).format(
-      new Date(commenceTime)
-    );
   };
 
   return (
@@ -49,14 +36,15 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                 <div
                   onClick={() =>
                     onSelectBet(
-                      addOnOdds.h2h.id,
-                      "h2h",
+                      addOnOdds.h2h.sport_key,
                       h2h.name,
                       h2h.price,
+                      "h2h",
                       addOnOdds.h2h.home_team,
                       addOnOdds.h2h.away_team,
-                      formatCommenceTime(addOnOdds.h2h.commence_time),
                       addOnOdds.h2h.sport_title,
+                      addOnOdds.h2h.id,
+                      addOnOdds.h2h.commence_time,
                       "Head to Head"
                     )
                   }
@@ -68,7 +56,7 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                       h2h.price,
                       addOnOdds.h2h.home_team,
                       addOnOdds.h2h.away_team,
-                      formatCommenceTime(addOnOdds.h2h.commence_time),
+                      addOnOdds.h2h.commence_time,
                       addOnOdds.h2h.sport_title,
                       "Head to Head"
                     )
@@ -96,14 +84,15 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                 <div
                   onClick={() =>
                     onSelectBet(
-                      addOnOdds.btts.id,
-                      addOnOdds.btts.bookmakers[0].markets[0].key,
+                      addOnOdds.btts.sport_key,
                       both.name,
                       both.price,
+                      addOnOdds.btts.bookmakers[0].markets[0].key,
                       addOnOdds.btts.home_team,
                       addOnOdds.btts.away_team,
-                      formatCommenceTime(addOnOdds.btts.commence_time),
                       addOnOdds.btts.sport_title,
+                      addOnOdds.btts.id,
+                      addOnOdds.btts.commence_time,
                       "Both Team Scores"
                     )
                   }
@@ -115,7 +104,7 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                       both.price,
                       addOnOdds.btts.home_team,
                       addOnOdds.btts.away_team,
-                      formatCommenceTime(addOnOdds.btts.commence_time),
+                      addOnOdds.btts.commence_time,
                       addOnOdds.btts.sport_title,
                       "Both Team Scores"
                     )
@@ -142,14 +131,15 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                 <div
                   onClick={() =>
                     onSelectBet(
-                      addOnOdds.draw.id,
-                      addOnOdds.draw.bookmakers[0].markets[0].key,
+                      addOnOdds.draw.sport_key,
                       draw.name,
                       draw.price,
+                      addOnOdds.draw.bookmakers[0].markets[0].key,
                       addOnOdds.draw.home_team,
                       addOnOdds.draw.away_team,
-                      formatCommenceTime(addOnOdds.draw.commence_time),
                       addOnOdds.draw.sport_title,
+                      addOnOdds.draw.id,
+                      addOnOdds.draw.commence_time,
                       "Draw no Bet"
                     )
                   }
@@ -161,7 +151,7 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                       draw.price,
                       addOnOdds.draw.home_team,
                       addOnOdds.draw.away_team,
-                      formatCommenceTime(addOnOdds.draw.commence_time),
+                      addOnOdds.draw.commence_time,
                       addOnOdds.draw.sport_title,
                       "Draw no Bet"
                     )
@@ -189,14 +179,15 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                   <div
                     onClick={() =>
                       onSelectBet(
-                        addOnOdds.double.id,
-                        addOnOdds.double.bookmakers[0].markets[0].key,
+                        addOnOdds.double.sport_key,
                         double.name,
                         double.price,
+                        addOnOdds.double.bookmakers[0].markets[0].key,
                         addOnOdds.double.home_team,
                         addOnOdds.double.away_team,
-                        formatCommenceTime(addOnOdds.double.commence_time),
                         addOnOdds.double.sport_title,
+                        addOnOdds.double.id,
+                        addOnOdds.double.commence_time,
                         "Double Chance"
                       )
                     }
@@ -208,7 +199,7 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                         double.price,
                         addOnOdds.double.home_team,
                         addOnOdds.double.away_team,
-                        formatCommenceTime(addOnOdds.double.commence_time),
+                        addOnOdds.double.commence_time,
                         addOnOdds.double.sport_title,
                         "Double Chance"
                       )
@@ -237,14 +228,15 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                   <div
                     onClick={() =>
                       onSelectBet(
-                        addOnOdds.first_half.id,
-                        addOnOdds.first_half.bookmakers[0].markets[0].key,
+                        addOnOdds.first_half.sport_key,
                         first.name,
                         first.price,
+                        addOnOdds.first_half.bookmakers[0].markets[0].key,
                         addOnOdds.first_half.home_team,
                         addOnOdds.first_half.away_team,
-                        formatCommenceTime(addOnOdds.first_half.commence_time),
                         addOnOdds.first_half.sport_title,
+                        addOnOdds.first_half.id,
+                        addOnOdds.first_half.commence_time,
                         "First Half"
                       )
                     }
@@ -256,7 +248,7 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                         first.price,
                         addOnOdds.first_half.home_team,
                         addOnOdds.first_half.away_team,
-                        formatCommenceTime(addOnOdds.first_half.commence_time),
+                        addOnOdds.first_half.commence_time,
                         addOnOdds.first_half.sport_title,
                         "First Half"
                       )
@@ -285,14 +277,15 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                   <div
                     onClick={() =>
                       onSelectBet(
-                        addOnOdds.second_half.id,
-                        addOnOdds.second_half.bookmakers[0].markets[0].key,
+                        addOnOdds.second_half.sport_key,
                         second.name,
                         second.price,
+                        addOnOdds.second_half.bookmakers[0].markets[0].key,
                         addOnOdds.second_half.home_team,
                         addOnOdds.second_half.away_team,
-                        formatCommenceTime(addOnOdds.second_half.commence_time),
                         addOnOdds.second_half.sport_title,
+                        addOnOdds.second_half.id,
+                        addOnOdds.second_half.commence_time,
                         "Second Half"
                       )
                     }
@@ -304,7 +297,7 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                         second.price,
                         addOnOdds.second_half.home_team,
                         addOnOdds.second_half.away_team,
-                        formatCommenceTime(addOnOdds.second_half.commence_time),
+                        addOnOdds.second_half.commence_time,
                         addOnOdds.second_half.sport_title,
                         "Second Half"
                       )
@@ -337,14 +330,15 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                       key={index}
                       onClick={() =>
                         onSelectBet(
-                          addOnOdds.totals.id,
-                          addOnOdds.totals.bookmakers[0].markets[0].key,
+                          addOnOdds.totals.sport_key,
                           total.name,
                           total.price,
+                          addOnOdds.totals.bookmakers[0].markets[0].key,
                           addOnOdds.totals.home_team,
                           addOnOdds.totals.away_team,
-                          formatCommenceTime(addOnOdds.totals.commence_time),
                           addOnOdds.totals.sport_title,
+                          addOnOdds.totals.id,
+                          addOnOdds.totals.commence_time,
                           total.point
                         )
                       }
@@ -356,7 +350,7 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                           total.price,
                           addOnOdds.totals.home_team,
                           addOnOdds.totals.away_team,
-                          formatCommenceTime(addOnOdds.totals.commence_time),
+                          addOnOdds.totals.commence_time,
                           addOnOdds.totals.sport_title,
                           total.point
                         )
@@ -387,14 +381,15 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                       key={index}
                       onClick={() =>
                         onSelectBet(
-                          addOnOdds.totals.id,
-                          addOnOdds.totals.bookmakers[0].markets[0].key,
+                          addOnOdds.totals.sport_key,
                           total.name,
                           total.price,
+                          addOnOdds.totals.bookmakers[0].markets[0].key,
                           addOnOdds.totals.home_team,
                           addOnOdds.totals.away_team,
-                          formatCommenceTime(addOnOdds.totals.commence_time),
                           addOnOdds.totals.sport_title,
+                          addOnOdds.totals.id,
+                          addOnOdds.totals.commence_time,
                           total.point
                         )
                       }
@@ -406,7 +401,7 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                           total.price,
                           addOnOdds.totals.home_team,
                           addOnOdds.totals.away_team,
-                          formatCommenceTime(addOnOdds.totals.commence_time),
+                          addOnOdds.totals.commence_time,
                           addOnOdds.totals.sport_title,
                           total.point
                         )
@@ -445,14 +440,15 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                       key={index}
                       onClick={() =>
                         onSelectBet(
-                          addOnOdds.spreads.id,
-                          addOnOdds.spreads.bookmakers[0].markets[0].key,
+                          addOnOdds.spreads.sport_key,
                           spread.name,
                           spread.price,
+                          addOnOdds.spreads.bookmakers[0].markets[0].key,
                           addOnOdds.spreads.home_team,
                           addOnOdds.spreads.away_team,
-                          formatCommenceTime(addOnOdds.spreads.commence_time),
                           addOnOdds.spreads.sport_title,
+                          addOnOdds.spreads.id,
+                          addOnOdds.spreads.commence_time,
                           spread.point
                         )
                       }
@@ -464,7 +460,7 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                           spread.price,
                           addOnOdds.spreads.home_team,
                           addOnOdds.spreads.away_team,
-                          formatCommenceTime(addOnOdds.spreads.commence_time),
+                          addOnOdds.spreads.commence_time,
                           addOnOdds.spreads.sport_title,
                           spread.point
                         )
@@ -497,14 +493,15 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                       key={index}
                       onClick={() =>
                         onSelectBet(
-                          addOnOdds.spreads.id,
-                          addOnOdds.spreads.bookmakers[0].markets[0].key,
+                          addOnOdds.spreads.sport_key,
                           spread.name,
                           spread.price,
+                          addOnOdds.spreads.bookmakers[0].markets[0].key,
                           addOnOdds.spreads.home_team,
                           addOnOdds.spreads.away_team,
-                          formatCommenceTime(addOnOdds.spreads.commence_time),
                           addOnOdds.spreads.sport_title,
+                          addOnOdds.spreads.id,
+                          addOnOdds.spreads.commence_time,
                           spread.point
                         )
                       }
@@ -516,7 +513,7 @@ const MoreBets = ({ bets, addOnOdds, onSelectBet }) => {
                           spread.price,
                           addOnOdds.spreads.home_team,
                           addOnOdds.spreads.away_team,
-                          formatCommenceTime(addOnOdds.spreads.commence_time),
+                          addOnOdds.spreads.commence_time,
                           addOnOdds.spreads.sport_title,
                           spread.point
                         )

@@ -5,9 +5,9 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
   const isBetSelected = (id, key, name, odd) => {
     for (let i = 0; i < bets.length; i++) {
       const f =
-        bets[i].id === id &&
-        bets[i].key === key &&
-        bets[i].name === name &&
+        bets[i].event_id === id &&
+        bets[i].bet_market === key &&
+        bets[i].chosen_team === name &&
         bets[i].odd === odd;
       if (f) {
         return f;
@@ -36,6 +36,7 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
             <div
               className="row py-3 px-lg-4 p-0 bg2 rounded mb-3 shadow-lg"
               key={game.id}
+              style={{ lineHeight: "10px" }}
             >
               <p className="text-warning ">{game.sport_title}</p>
               <hr className="p-0 text-secondary" />
@@ -45,17 +46,22 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
                     {formatCommenceTime(game.commence_time)}
                   </p>
                 </div>
-                <div className="col-lg-2 col-5 text-end">
+                <div className="col-lg-2 col-5 text-end g-0">
                   <Link
                     to={`/sports/${game.sport_key}/${game.id}`}
                     className="text-warning bi-plus-lg font-monospace"
-                  >&nbsp;Side Bets</Link>
+                  >
+                    &nbsp;Side Bets
+                  </Link>
                 </div>
               </div>
 
               <div className="bets col-lg-4 col-12 pt-3">
-                <div className="d-block d-md-none">
-                  <p className="">
+                <div
+                  className="d-block d-md-none"
+                  style={{ lineHeight: "15px" }}
+                >
+                  <p>
                     {game.home_team} <span className="text-info mx-4">vs</span>
                     {game.away_team}
                   </p>
@@ -66,22 +72,23 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
                 </div>
               </div>
 
-              <div className="col-lg-8 col-12 mt-lg-0 mt-3 p-1">
-                <div className="row">
+              <div className="col-lg-8 col-12 mt-lg-0 mt-3 p-1 g-0">
+                <div className="row gx-2">
                   {game.bookmakers[0].markets[0].outcomes.length === 3
                     ? game.bookmakers[0].markets[0].outcomes.map((outcome) => (
                         <div className="bets col-lg-4 col-4" key={outcome.name}>
                           <div
                             onClick={() =>
                               onSelectBet(
-                                game.id,
-                                game.bookmakers[0].markets[0].key,
+                                game.sport_key,
                                 outcome.name,
                                 outcome.price,
+                                game.bookmakers[0].markets[0].key,
                                 game.home_team,
                                 game.away_team,
-                                formatCommenceTime(game.commence_time),
-                                game.sport_title
+                                game.sport_title,
+                                game.id,
+                                game.commence_time
                               )
                             }
                             className={`${
@@ -90,10 +97,11 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
                                 game.bookmakers[0].markets[0].key,
                                 outcome.name,
                                 outcome.price,
+                                game.sport_key,
                                 game.home_team,
                                 game.away_team,
-                                formatCommenceTime(game.commence_time),
-                                game.sport_title
+                                game.sport_title,
+                                game.commence_time
                               )
                                 ? "selected"
                                 : "bg odds"
@@ -111,14 +119,15 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
                           <div
                             onClick={() =>
                               onSelectBet(
-                                game.id,
-                                game.bookmakers[0].markets[0].key,
+                                game.sport_key,
                                 outcome.name,
                                 outcome.price,
+                                game.bookmakers[0].markets[0].key,
                                 game.home_team,
                                 game.away_team,
-                                formatCommenceTime(game.commence_time),
-                                game.sport_title
+                                game.sport_title,
+                                game.id,
+                                game.commence_time
                               )
                             }
                             className={`${
@@ -127,10 +136,11 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
                                 game.bookmakers[0].markets[0].key,
                                 outcome.name,
                                 outcome.price,
+                                game.sport_key,
                                 game.home_team,
                                 game.away_team,
-                                formatCommenceTime(game.commence_time),
-                                game.sport_title
+                                game.sport_title,
+                                game.commence_time
                               )
                                 ? "selected"
                                 : "bg odds"

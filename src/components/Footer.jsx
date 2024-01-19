@@ -9,7 +9,7 @@ import About from "./Footer/About";
 const Footer = () => {
   return (
     <>
-      <footer className="ps-lg-5 mt-5 pb-lg-0 mb-lg-0 pb-5 mb-5">
+      <footer className="ps-lg-5 pb-lg-0 mb-lg-0 pb-5 mb-5">
         <div id="footer" className="container">
           <div className="row justify-content-center">
             <div className="mt-5 col-lg-3 col-md-12 col-12 small">

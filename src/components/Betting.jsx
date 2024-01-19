@@ -158,38 +158,40 @@ const Betting = () => {
 
   // User Bets
   const handleBets = (
-    id,
-    key,
-    name,
-    price,
+    sports_key,
+    chosen_team,
+    odd,
+    bet_market,
     home,
     away,
-    commence_time,
     sport_title,
+    event_id,
+    event_date,
     point
   ) => {
     const newBet = {
-      id,
-      key,
-      name,
-      odd: price,
+      sports_key,
+      chosen_team,
+      odd,
+      bet_market,
       home,
       away,
-      commence_time,
       sport_title,
+      event_id,
+      event_date,
       point,
     };
 
     const existingBetIndex = bets.findIndex(
-      (bet) => bet.id === id && bet.key === key
+      (bet) => bet.event_id === event_id && bet.bet_market === bet_market
     );
 
     const existingBetIndexForRemovingBet = bets.findIndex(
       (bet) =>
-        bet.id === id &&
-        bet.key === key &&
-        bet.name == name &&
-        bet.odd === price
+        bet.event_id === event_id &&
+        bet.bet_market === bet_market &&
+        bet.chosen_team == chosen_team &&
+        bet.odd === odd
     );
 
     if (existingBetIndex !== -1) {
@@ -198,8 +200,8 @@ const Betting = () => {
 
         updatedBets[existingBetIndex] = {
           ...updatedBets[existingBetIndex],
-          name,
-          odd: price,
+          chosen_team,
+          odd,
           point,
         };
         return updatedBets;
@@ -218,7 +220,6 @@ const Betting = () => {
 
     // For getting the browser width and change the width of the bets and other staffs
     const windowWidth = window.innerWidth;
-    console.log(windowWidth);
     if (windowWidth > 991) {
       if (
         (betsWidth === "bet-2" && slipWidth === "slip-1") ||
@@ -232,7 +233,7 @@ const Betting = () => {
       setBetsWidth("bet-2");
     }
   };
-  // Small device slip handler
+
   const handleSlipStyle = () => {
     if (showSlip) {
       setShowSlip(false);
@@ -240,10 +241,12 @@ const Betting = () => {
       setShowSlip(true);
     }
   };
+
   // Clear Bet slip
   const handleClearBets = () => {
     setBets([]);
   };
+
   // Show bet slip
   const handleBetSlip = () => {
     if (betsWidth == "bet-3") {
@@ -256,10 +259,14 @@ const Betting = () => {
   const handleRemoveBets = (id, key, name, odd) => {
     const filteredBets = bets.filter(
       (bet) =>
-        bet.id !== id || bet.key !== key || bet.name !== name || bet.odd !== odd
+        bet.event_id !== id ||
+        bet.bet_market !== key ||
+        bet.chosen_team !== name ||
+        bet.odd !== odd
     );
     setBets(filteredBets);
   };
+
   // Small device sport handler
   const handleShowSport = () => {
     if (showSports) {
@@ -268,6 +275,7 @@ const Betting = () => {
       setShowSports(true);
     }
   };
+
   return (
     <>
       <Navbar></Navbar>
@@ -313,14 +321,20 @@ const Betting = () => {
           <div
             className={`${
               slipWidth === "slip-1" ? "hidden" : slipWidth
-            } slip bg2 d-none d-lg-block`}
+            }  d-none d-lg-block`}
           >
-            <Slip
-              removeBets={handleRemoveBets}
-              clearBets={handleClearBets}
-              bets={bets}
-              onHandleBetSlip={handleBetSlip}
-            ></Slip>
+            <div
+              className={`${
+                slipWidth === "slip-1" && "hidden"
+              }  slip-container shadow-lg`}
+            >
+              <Slip
+                removeBets={handleRemoveBets}
+                clearBets={handleClearBets}
+                bets={bets}
+                onHandleBetSlip={handleBetSlip}
+              ></Slip>
+            </div>
           </div>
 
           {/* Small Device Slip */}

@@ -20,6 +20,11 @@ export const features = [
     id: 3,
     link: "https://maverickhabesha.com/games/roulette/",
   },
+  {
+    title: "Payments",
+    id: 4,
+    link: "https://maverickhabesha.com/payments.html",
+  },
 ];
 
 export const games = [
@@ -37,6 +42,11 @@ export const games = [
     title: "Hilo",
     link: "https://maverickhabesha.com/games/hilo/build/",
     id: 7,
+  },
+  {
+    title: "Dragon Tower",
+    link: "https://maverickhabesha.com/games/dragon-tower/",
+    id: 8,
   },
 ];
 

@@ -1,6 +1,6 @@
 // Default View
 const api_key_upcoming = "a3ba56b3e6d90020db675eabec7833ab";
-const api_key_sports = "b3d173b528f5355f3ddf26b87cfd8b83";
+const api_key_sports = "27585d8c6e125574c04a207ef7516a4d";
 // More Odds
 const api_key_h2h = "64d490df04d29443d3274b5303dc3477";
 const api_key_btts = "f1ae8e96ffcf24c56551ffc98948f8c1";
@@ -10,7 +10,6 @@ const api_key_first_half = "b736216ed22f754d3f9b3265af167385";
 const api_key_second_half = "297dad8259ec68bf5df9fbc1fc226c32";
 const api_key_alternate_totals = "a05115925350effe2c98ddf5d4387205";
 const api_key_alternate_spreads = "7dd5285b7d0dea60424fd88a6bc4d82d";
-
 
 const api_url = `https://api.the-odds-api.com/v4/sports`;
 

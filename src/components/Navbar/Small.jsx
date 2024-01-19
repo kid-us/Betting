@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import logo from "../../assets/mmm.png";
 import { Link } from "react-router-dom";
-import { useAuth } from "../../utils/Auth";
+import { useAuth } from "../../context/AuthenticateUser";
 import SmallMenu from "./SmallMenu";
 
 const Small = ({ user, balance }) => {

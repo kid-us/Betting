@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import slip from "../../assets/bets/slip1.svg";
+import { sports } from "../../assets";
 
 const TopSidebars = () => {
   return (
@@ -23,7 +24,7 @@ const TopSidebars = () => {
         </p>
       </Link>
 
-      <Link>
+      <Link to={"/sports/my-bets"}>
         <p className="fs-5 text-warning ps-3 bg p-2 rounded">
           <img src={slip} alt="" width={"20px"} />
           <span className="text-white fs-6 ms-2">My Bets</span>

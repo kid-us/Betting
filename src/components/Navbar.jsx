@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import Large from "./Navbar/Large";
 import Small from "./Navbar/Small";
-import { useAuth } from "../utils/Auth";
+import { useAuth } from "../context/AuthenticateUser";
 
 const Navbar = () => {
   const auth = useAuth();

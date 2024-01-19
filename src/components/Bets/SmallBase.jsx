@@ -21,9 +21,9 @@ const SmallBase = () => {
       <div
         className={`px-4 sm-sidebar-wrapper fw-semibold shadow-lg animate__animated animate__fadeInUp`}
       >
-        <Link>
+        <Link to={"/sports/my-bets"}>
           <p className="fs-5 text-warning ps-3 bg2 p-2 rounded mt-3">
-            <img src={slip} alt="" width={"20px"} />
+            <img src={slip} alt="slip" width={"20px"} />
             <span className="text-white fs-6 ms-2">My Bets</span>
           </p>
         </Link>
@@ -61,14 +61,16 @@ const SmallBase = () => {
                   <ul className="animate__animated animate__fadeIn">
                     <hr />
                     {sport.top.map((top) => (
-                      <li className={`pb-1`} key={top.key}>
+                      <div className={`pb-1`} key={top.key}>
                         <Link
                           to={`/sports/${top.key}?title=${top.title}`}
                           className="sports"
                         >
-                          {top.title}
+                          <p className="bg-warning w-100 rounded p-2 text-black mb-1">
+                            {top.title}
+                          </p>
                         </Link>
-                      </li>
+                      </div>
                     ))}
                   </ul>
                 )}

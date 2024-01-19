@@ -69,11 +69,17 @@ li {
 }
 
 .selected {
-  background-color: #a47f05 !important;
+  background-color: #ffc107 !important;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  /* ffc107 */
+  color: #000;
+  font-size: 10px;
+  box-shadow: 1px 1px 4px #fff;
+}
+.selected .text-info {
+  color: #fff !important;
+  font-size: 16px;
 }
 
 .odds {

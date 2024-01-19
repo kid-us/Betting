@@ -106,7 +106,7 @@ div a {
 
 #support {
   position: fixed;
-  bottom: 10px;
+  bottom: 60px;
   right: 10px;
   border-radius: 50%;
   z-index: 9;
@@ -240,11 +240,7 @@ div a {
   width: 57.5% !important;
 }
 
-.slip-3 {
-  width: 26% !important;
-}
-
-.bet-4 {
+z .bet-4 {
   width: 69.5% !important;
 }
 
@@ -300,7 +296,7 @@ div a {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 /* Btn styles */
