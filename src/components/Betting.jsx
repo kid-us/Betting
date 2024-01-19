@@ -311,7 +311,9 @@ const Betting = () => {
                   bets={bets}
                   sportName={sportTitle}
                 ></Bet>
-                <Support></Support>
+                <div className="d-none d-md-block">
+                  <Support></Support>
+                </div>
                 <Footer></Footer>
               </>
             )}
