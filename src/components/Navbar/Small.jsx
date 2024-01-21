@@ -26,7 +26,7 @@ const Small = ({ user, balance }) => {
         <div className="row justify-content-between px-2">
           <div className="col-2">
             <Link to="/sports/home" className="navbar-brand">
-              <img src={logo} alt="logo" width="50px" />
+              <img src={logo} alt="logo" className="mt-1" width="45px" />
             </Link>
           </div>
 
@@ -43,7 +43,7 @@ const Small = ({ user, balance }) => {
                 className="py-1 wallet rounded bg2"
               >
                 <span id="sm-user-balance" className="py-1 px-3 bg-dark small">
-                  {balance} ETB
+                  {balance} <span className="small">ETB</span>
                 </span>
                 <span className="px-2 text-black bg-warning py-1 rounded bi-wallet-fill"></span>
               </Link>

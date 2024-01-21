@@ -298,7 +298,7 @@ const Betting = () => {
           </div>
 
           {/* Bets */}
-          <div className={`${betsWidth} bg mt-5 pt-4`}>
+          <div className={`${betsWidth} bg mt-5 pt-3`}>
             {loading ? (
               <Loading width={betsWidth === "bet-2" ? "81.1%" : "56%"} />
             ) : (
