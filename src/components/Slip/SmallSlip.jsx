@@ -278,7 +278,7 @@ const SmallSlip = ({ removeBets, clearBets, bets, onBetSlipClose }) => {
                       x
                     </p>
                   </div>
-                  <p className="small ms12 text-info">
+                  <p className="small ms12 text-info font-monospace">
                     {formatCommenceTime(bet.event_date)}
                   </p>
                   <div className="col-9 ps-4">
@@ -344,7 +344,7 @@ const SmallSlip = ({ removeBets, clearBets, bets, onBetSlipClose }) => {
                     x
                   </p>
                 </div>
-                <p className="small ms12 text-info">
+                <p className="small ms12 text-info font-monospace">
                   {formatCommenceTime(bet.event_date)}
                 </p>
                 <div className="col-9 ps-4">

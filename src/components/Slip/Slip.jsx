@@ -188,7 +188,7 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
               width={"20px"}
               alt="bet icon"
               className="ms-3"
-            />{" "}
+            />
             Bet Slip
             <span className="bg-warning px-2 py-1 ms-2 me-2 rounded text-black font-monospace">
               {bets.length}
@@ -292,7 +292,7 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
                       x
                     </p>
                   </div>
-                  <p className="small text-info">
+                  <p className="small text-info font-monospace">
                     {formatCommenceTime(bet.event_date)}
                   </p>
                   <div className="col-9 ps-4">
@@ -362,7 +362,7 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
                     x
                   </p>
                 </div>
-                <p className="small ms12 text-info">
+                <p className="small ms12 text-info font-monospace">
                   {formatCommenceTime(bet.event_date)}
                 </p>
                 <div className="col-9 ps-4">

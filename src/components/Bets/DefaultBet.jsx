@@ -42,7 +42,7 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
               <hr className="p-0 text-secondary" />
               <div className="row justify-content-between">
                 <div className="col-lg-10 col-7">
-                  <p className="small text-info">
+                  <p className="small text-info font-monospace">
                     {formatCommenceTime(game.commence_time)}
                   </p>
                 </div>
