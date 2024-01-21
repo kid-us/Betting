@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div id="navbar" className="px-3  bg2 shadow-lg">
+      <div id="navbar" className="px-3 py-lg-2 bg2 shadow-lg">
         <Large balance={balance} user={user}></Large>
         <Small balance={balance} user={user}></Small>
       </div>

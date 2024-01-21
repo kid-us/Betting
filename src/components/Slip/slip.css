@@ -8,12 +8,13 @@
 .large-slip {
   position: fixed;
   width: 25% !important;
-  height: 92%;
+  height: 91%;
   right: 0;
   bottom: 0;
 }
+
 .single-slip-container {
-  height: 56%;
+  height: 52%;
   padding-bottom: 60px;
   overflow: scroll !important;
 }

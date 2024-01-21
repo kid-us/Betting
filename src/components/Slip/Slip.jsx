@@ -177,10 +177,10 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
 
   return (
     <>
-      <div className="large-slip bg2 small rounded fw-semibold">
+      <div className="large-slip bg2 small fw-semibold">
         <div className="slip-header">
           <p
-            className="pt-3 bg2 pb-3"
+            className="pt-3 bg2 pb-3 rounded"
             style={{ borderBottom: "1px solid grey" }}
           >
             <img

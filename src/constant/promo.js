@@ -11,7 +11,7 @@ export const promo = [
   {
     id: 1,
     title: "Soccer",
-    note: "Bet on your favorite teams with the best odds in the market",
+    note: "Bet on your favorite teams with best odds in market",
     img: promoSoccer,
   },
   {
