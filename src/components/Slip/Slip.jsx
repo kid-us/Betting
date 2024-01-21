@@ -329,7 +329,7 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
             ) : (
               <div className="text-center small text-info">
                 <img src={slip_img} width={"150px"} className="mt-5 pt-4" />
-                <li className="mt-5">!Bet Slip is Empty</li>
+                <li className="mt-5">Bet Slip is Empty!</li>
                 <li>Start Betting Now</li>
               </div>
             )
@@ -381,7 +381,7 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
           ) : (
             <div className="text-center small text-info">
               <img src={slip_img} width={"150px"} className="mt-5 pt-4" />
-              <li className="mt-5">!Bet Slip is Empty</li>
+              <li className="mt-5">Bet Slip is Empty!</li>
               <li>Start Betting Now</li>
             </div>
           )}
