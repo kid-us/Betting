@@ -48,7 +48,7 @@ const Betting = () => {
           );
           document.title = "Maverick Habesha Sports Betting";
           // Set Data to the Sates
-          setSportTitle("Popular Events");
+          setSportTitle("Sports Book");
           setOdds(filteredData);
           setViewDefaultBet(true);
           setLoading(false);

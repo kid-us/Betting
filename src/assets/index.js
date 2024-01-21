@@ -38,6 +38,7 @@ import promoNfl from "./nfl.jpg";
 import promoBoxing from "./box.jpg";
 //
 import browse from "./browse.png";
+import vip from "./vip.png";
 
 export {
   home,
@@ -79,4 +80,5 @@ export {
   promoBoxing,
   //
   browse,
+  vip,
 };

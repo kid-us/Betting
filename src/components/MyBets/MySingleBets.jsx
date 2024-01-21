@@ -92,12 +92,12 @@ const MySingleBets = ({ singleSlips, slipType, addBalance, itemsPerPage }) => {
                         <span> {single.slips[0].away}</span>
                       </p>
                     </div>
-                    <div className="col-6 ps-4">
+                    <div className="col-8 ps-4">
                       <p className="text-warning">
                         {single.slips[0].chosen_team}
                       </p>
                     </div>
-                    <div className="col-6">
+                    <div className="col-4">
                       <p className="text-warning font-monospace text-end pe-4">
                         {single.slips[0].odds}
                       </p>

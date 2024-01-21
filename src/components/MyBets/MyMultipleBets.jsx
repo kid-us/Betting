@@ -114,13 +114,13 @@ const MyMultipleBets = ({
                             </p>
                           </div>
 
-                          <div className="col-6">
+                          <div className="col-8">
                             <p className="text-warning">
                               {mulSlip.chosen_team}
                             </p>
                           </div>
 
-                          <div className="col-6">
+                          <div className="col-4">
                             <p className="text-warning font-monospace text-end pe-4">
                               {mulSlip.odds}
                             </p>

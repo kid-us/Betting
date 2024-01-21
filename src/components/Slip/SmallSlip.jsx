@@ -102,6 +102,7 @@ const SmallSlip = ({ removeBets, clearBets, bets, onBetSlipClose }) => {
           if (response.status === 200) {
             clearBets();
             setSingleBets([]);
+            window.location.reload();
           }
         })
         .catch((error) => {
@@ -159,76 +160,165 @@ const SmallSlip = ({ removeBets, clearBets, bets, onBetSlipClose }) => {
     );
   };
 
-  return (
-    <div className="sm-slip-container small fw-semibold bg2 animate__animated animate__fadeInUp">
-      <p className="pt-2 bg pb-4 ps-3 border-bottom border-secondary">
-        <img src={slip_img2} width={"20px"} /> Bet Slip
-        <span className="bg-warning px-2 py-1 ms-2 me-4 rounded text-black font-monospace">
-          {bets.length}
-        </span>
-        <span
-          onClick={onBetSlipClose}
-          className="cursor bi-x-lg slip-close"
-        ></span>
-      </p>
+  const handleDeleteSlip = (id, key, name, odd) => {
+    const filteredBets = singleBets.filter(
+      (bet) =>
+        bet.event_id !== id ||
+        bet.bet_market !== key ||
+        bet.chosen_team !== name ||
+        bet.odd !== odd
+    );
+    setSingleBets(filteredBets);
+  };
 
-      <div
-        className="row mx-3 border-bottom border-danger"
-        style={{ lineHeight: "20px" }}
-      >
-        <div
-          className="12 shadow bg rounded-pill ps-3 mb-3"
-          style={{ lineHeight: "10px" }}
-        >
-          <div className="row justify-content-center">
+  return (
+    <div className="small-slip bg2">
+      <div className="sm-slip-container small fw-semibold bg2 animate__animated animate__fadeInUp">
+        <div className="slip-header">
+          <p className="pt-2 bg pb-4 ps-3 border-bottom border-secondary">
+            <img src={slip_img2} width={"20px"} /> Bet Slip
+            <span className="bg-warning px-2 py-1 ms-2 me-4 rounded text-black font-monospace">
+              {bets.length}
+            </span>
+            <span
+              onClick={onBetSlipClose}
+              className="cursor bi-x-lg slip-close ps-4"
+            ></span>
+          </p>
+          <div
+            className="row mx-3 border-bottom border-danger"
+            style={{ lineHeight: "20px" }}
+          >
             <div
-              onClick={() => handleBetType("single")}
-              className={`col-6 ${single} `}
+              className="12 shadow bg rounded-pill ps-3 mb-3"
+              style={{ lineHeight: "10px" }}
             >
-              <p
-                className={`ps-2 pt-3 bi-tag-fill ${
-                  activeBet === "single" && "text-warning"
-                }`}
-              >
-                &nbsp; Single
-              </p>
+              <div className="row justify-content-center">
+                <div
+                  onClick={() => handleBetType("single")}
+                  className={`col-6 ${single} `}
+                >
+                  <p
+                    className={`ps-2 pt-3 bi-tag-fill ${
+                      activeBet === "single" && "text-warning"
+                    }`}
+                  >
+                    &nbsp; Single
+                  </p>
+                </div>
+                <div
+                  onClick={() => handleBetType("multiple")}
+                  className={`col-6 ${multiple}`}
+                >
+                  <p
+                    className={`ps-2 pt-3 bi-tags-fill ${
+                      activeBet === "multiple" && "text-warning"
+                    }`}
+                  >
+                    &nbsp; Multiple
+                  </p>
+                </div>
+              </div>
             </div>
-            <div
-              onClick={() => handleBetType("multiple")}
-              className={`col-6 ${multiple}`}
-            >
-              <p
-                className={`ps-2 pt-3 bi-tags-fill ${
-                  activeBet === "multiple" && "text-warning"
-                }`}
-              >
-                &nbsp; Multiple
+
+            <hr />
+            <div className="col-8" style={{ lineHeight: "8px" }}>
+              <p className="text-info">Your Bets</p>
+            </div>
+            <div className="col-4" style={{ lineHeight: "8px" }}>
+              <p className="bg2 text-end small cursor me-3" onClick={clearBets}>
+                Clear All
               </p>
             </div>
           </div>
         </div>
 
-        <hr />
-        <div className="col-8" style={{ lineHeight: "8px" }}>
-          <p className="text-info">Your Bets</p>
-        </div>
-        <div className="col-4" style={{ lineHeight: "8px" }}>
-          <p className="bg2 text-end small cursor me-3" onClick={clearBets}>
-            Clear All
-          </p>
-        </div>
-      </div>
-
-      {/* Bets */}
-      <div
-        className={`px-4 bg pt-2 ${
-          activeBet === "single"
-            ? "sm-single-slip-container"
-            : "sm-multiple-slip-container"
-        }`}
-      >
-        {activeBet === "single" ? (
-          // Single Bet
+        {/* Bets */}
+        <div
+          className={`px-4 bg pt-4 ${
+            activeBet === "single"
+              ? "sm-single-slip-container"
+              : "sm-multiple-slip-container"
+          }`}
+        >
+          {activeBet === "single" ? (
+            // Single Bet
+            bets.length > 0 ? (
+              bets.map((bet, index) => (
+                <div key={index} className="row bet-slip bg2 rounded pt-2 mb-3">
+                  <div className="col-11 small">
+                    <p>
+                      {bet.home} <span className="text-info mx-3">vs</span>
+                      {bet.away}
+                    </p>
+                  </div>
+                  <div
+                    onClick={() =>
+                      handleDeleteSlip(
+                        bet.event_id,
+                        bet.bet_market,
+                        bet.chosen_team,
+                        bet.odd
+                      )
+                    }
+                    className="col-1 small"
+                  >
+                    <p
+                      onClick={() =>
+                        removeBets(
+                          bet.event_id,
+                          bet.bet_market,
+                          bet.chosen_team,
+                          bet.odd
+                        )
+                      }
+                      className="cursor text-info"
+                    >
+                      x
+                    </p>
+                  </div>
+                  <p className="small ms12 text-info">
+                    {formatCommenceTime(bet.event_date)}
+                  </p>
+                  <div className="col-9 ps-4">
+                    <p className="text-warning fs-6">
+                      {bet.chosen_team}
+                      <span className="small text-white font-monospace">
+                        {bet.point}
+                      </span>
+                    </p>
+                  </div>
+                  <div className="col-1 small">
+                    <p className="text-warning fs-6 font-monospace">
+                      {bet.odd}
+                    </p>
+                  </div>
+                  <div className="col-6">
+                    <input
+                      onChange={handleInputs(bet, index)}
+                      type="number"
+                      className="form-control py-1 fs-6 fw-semibold text-center font-monospace slip-input bg"
+                      placeholder="0.00"
+                      min={5}
+                    />
+                  </div>
+                  <div className="col-4 offset-2 line-hight-small">
+                    <p className="small text-info lh-1">Est. Payout </p>
+                    <p className="font-monospace text-warning fs-6">
+                      {handleEstPayout(bet.event_id, bet.bet_market, index) ||
+                        "0.00"}
+                    </p>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="text-center small text-info">
+                <img src={slip_img} width={"150px"} className="mt-5 pt-4" />
+                <li className="mt-5">!Bet Slip is Empty</li>
+                <li>Start Betting Now</li>
+              </div>
+            )
+          ) : // Multiple
           bets.length > 0 ? (
             bets.map((bet, index) => (
               <div key={index} className="row bet-slip bg2 rounded pt-2 mb-3">
@@ -267,22 +357,6 @@ const SmallSlip = ({ removeBets, clearBets, bets, onBetSlipClose }) => {
                 <div className="col-1 small">
                   <p className="text-warning fs-6 font-monospace">{bet.odd}</p>
                 </div>
-                <div className="col-6">
-                  <input
-                    onChange={handleInputs(bet, index)}
-                    type="number"
-                    className="form-control py-1 fs-6 fw-semibold text-center font-monospace slip-input bg"
-                    placeholder="0.00"
-                    min={5}
-                  />
-                </div>
-                <div className="col-4 offset-2 line-hight-small">
-                  <p className="small text-info lh-1">Est. Payout </p>
-                  <p className="font-monospace text-warning fs-6">
-                    {handleEstPayout(bet.event_id, bet.bet_market, index) ||
-                      "0.00"}
-                  </p>
-                </div>
               </div>
             ))
           ) : (
@@ -291,106 +365,62 @@ const SmallSlip = ({ removeBets, clearBets, bets, onBetSlipClose }) => {
               <li className="mt-5">!Bet Slip is Empty</li>
               <li>Start Betting Now</li>
             </div>
-          )
-        ) : // Multiple
-        bets.length > 0 ? (
-          bets.map((bet, index) => (
-            <div key={index} className="row bet-slip bg2 rounded pt-2 mb-3">
-              <div className="col-11 small">
-                <p>
-                  {bet.home} <span className="text-info mx-3">vs</span>
-                  {bet.away}
-                </p>
-              </div>
-              <div className="col-1 small">
-                <p
-                  onClick={() =>
-                    removeBets(
-                      bet.event_id,
-                      bet.bet_market,
-                      bet.chosen_team,
-                      bet.odd
-                    )
-                  }
-                  className="cursor text-info"
-                >
-                  x
-                </p>
-              </div>
-              <p className="small ms12 text-info">
-                {formatCommenceTime(bet.event_date)}
-              </p>
-              <div className="col-9 ps-4">
-                <p className="text-warning fs-6">
-                  {bet.chosen_team}
-                  <span className="small text-white font-monospace">
-                    {bet.point}
-                  </span>
-                </p>
-              </div>
-              <div className="col-1 small">
-                <p className="text-warning fs-6 font-monospace">{bet.odd}</p>
-              </div>
+          )}
+        </div>
+
+        {/* Buttton */}
+        {activeBet === "multiple" ? (
+          <div className="slip-footer position-relative">
+            <div
+              className="bg2 w-100 position-fixed bottom-0"
+              style={{ bottom: "10px" }}
+            >
+              <Multiple balance={balance} bets={bets}></Multiple>
             </div>
-          ))
+          </div>
         ) : (
-          <div className="text-center small text-info">
-            <img src={slip_img} width={"150px"} className="mt-5 pt-4" />
-            <li className="mt-5">!Bet Slip is Empty</li>
-            <li>Start Betting Now</li>
+          <div className="slip-footer position-relative">
+            <div
+              className="px-3 bg2 w-100 position-fixed bottom-0"
+              style={{ bottom: "10px" }}
+            >
+              <div className="row" style={{ lineHeight: "10px" }}>
+                <div className="col-8 text-info small text-uppercase pt-3">
+                  <p>Total Bet Amount </p>
+                </div>
+                <div className="col-4 pt-3">
+                  <p className="text-warning fs-6 font-monospace">
+                    {totalBetAmount()} ETB
+                  </p>
+                </div>
+
+                <div className="col-8 text-info small text-uppercase">
+                  <p>Est. Payout </p>
+                </div>
+                <div className="col-4">
+                  <p className="text-warning fs-6 font-monospace">
+                    {totalEstPayout()}
+                  </p>
+                </div>
+              </div>
+              {/* Error Message */}
+              {singleBetError && errorMessage()}
+              {totalBetAmount() > balance ? (
+                <button className="btn btn-light disabled bet-btn w-100 px-1 py-2 fw-semibold mt-2">
+                  Low Balance
+                </button>
+              ) : (
+                <button
+                  onClick={handleSingleBetSlips}
+                  className="btn btn-warning bet-btn w-100 px-1 py-2 fw-semibold mt-2"
+                >
+                  Place Single Bet
+                </button>
+              )}
+            </div>
           </div>
         )}
       </div>
-
-      {/* Buttton */}
-      {activeBet === "multiple" ? (
-        <div className="sm-slip-info position-relative">
-          <div className="position-absolute w-100" style={{ bottom: "20px" }}>
-            <Multiple balance={balance} bets={bets}></Multiple>
-          </div>
-        </div>
-      ) : (
-        <div className="sm-slip-info position-relative">
-          <div
-            className="sm-slip-info position-absolute bg2 px-3 pt-3 w-100"
-            style={{ bottom: "10px" }}
-          >
-            <div className="row" style={{ lineHeight: "10px" }}>
-              <div className="col-8 text-info small text-uppercase">
-                <p>Total Bet Amount </p>
-              </div>
-              <div className="col-4">
-                <p className="text-warning fs-6 font-monospace">
-                  {totalBetAmount()} ETB
-                </p>
-              </div>
-
-              <div className="col-8 text-info small text-uppercase">
-                <p>Est. Payout </p>
-              </div>
-              <div className="col-4">
-                <p className="text-warning fs-6 font-monospace">
-                  {totalEstPayout()}
-                </p>
-              </div>
-            </div>
-            {/* Error Message */}
-            {singleBetError && errorMessage()}
-            {totalBetAmount() > balance ? (
-              <button className="btn btn-light disabled bet-btn w-100 px-1 py-2 fw-semibold mt-2">
-                Low Balance
-              </button>
-            ) : (
-              <button
-                onClick={handleSingleBetSlips}
-                className="btn btn-warning bet-btn w-100 px-1 py-2 fw-semibold mt-2"
-              >
-                Place Single Bet
-              </button>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   );
 };

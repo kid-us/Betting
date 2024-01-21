@@ -55,6 +55,7 @@ const Form = ({ bets, balance, clearBets }) => {
         if (response.status === 200) {
           clearBets();
           setBetAmount(0);
+          window.location.reload();
         }
       })
       .catch((error) => {
@@ -65,7 +66,7 @@ const Form = ({ bets, balance, clearBets }) => {
   return (
     <>
       <div
-        className="form-container pt-2 fw-semibold px-3 pt-3 bg2 slip-info"
+        className="form-container pt-2 fw-semibold px-3 pt-3 bg2"
         style={{ lineHeight: "10px" }}
       >
         <div className="row">

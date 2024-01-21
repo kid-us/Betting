@@ -31,6 +31,7 @@ const Loading = ({ width }) => {
           ></Player>
         </div>
       </div>
+      
       {/* Small Device */}
       <div className="d-block d-md-none">
         <div

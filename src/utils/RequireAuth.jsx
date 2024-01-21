@@ -5,7 +5,8 @@ import axios from "axios";
 const RequireAuth = ({ children }) => {
   const auth = useAuth();
 
-  const key ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNDk2MjI2OCwianRpIjoiYzRkMDgzY2UtZTJjYS00NWI4LWI2YTMtYTY1MWJjYTQ5OTNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImtpZHVzaGgyOUBnbWFpbC5jb20iLCJuYmYiOjE3MDQ5NjIyNjgsImV4cCI6MTcwNTIyMTQ2OH0.CjtMuQddAuKtnP9hZ4MnvjM9QeH_6hsP1kB0mQv976Q"
+  const key =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNTgyOTU0MSwianRpIjoiZWM5ZDMwZmMtMGFlZS00ZGM0LWJlYTktMDZiNmRhZjU4MGU0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImtpZHVzaGgyOUBnbWFpbC5jb20iLCJuYmYiOjE3MDU4Mjk1NDEsImV4cCI6MTcwNjA4ODc0MX0.AOV7526Bc-AVZCa0EIiBJMTWEqJxmTcvg-TfnrY6qb4";
   useEffect(() => {
     axios
       .get(request.getCurrentUser, {
