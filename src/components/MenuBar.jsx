@@ -5,7 +5,7 @@ const MenuBar = ({ bets, onClick, onShowSport, from }) => {
   return (
     <>
       <div className="menu-bar w-100 d-block d-lg-none">
-        <div className="row text-center fw-semibold pb-0 shadow-lg bg text-black border-top border-secondary">
+        <div className="row text-center fw-semibold pb-0 shadow-lg bg2 text-black">
           <div className="col-3 text-warning" onClick={onShowSport}>
             <img src={browse} width={"25px"} alt="" />
             <p className="fs-6">Browse</p>
