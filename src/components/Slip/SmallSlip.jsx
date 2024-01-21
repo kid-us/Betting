@@ -4,6 +4,7 @@ import slip_img2 from "../../assets/bets/slip1.svg";
 import "./slip.css";
 import { useAuth } from "../../context/AuthenticateUser";
 import Multiple from "./Multiple";
+import axios from "axios";
 
 const SmallSlip = ({ removeBets, clearBets, bets, onBetSlipClose }) => {
   const auth = useAuth();

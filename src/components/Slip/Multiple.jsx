@@ -31,7 +31,6 @@ const Form = ({ bets, balance, clearBets }) => {
   const onSubmit = (data) => {
     let potential_payout = Number(totalPayout);
     let bet_amount = Number(data.bet_amount);
-    console.log(bets);
     const slip = {
       slips: bets,
       bet_amount,
@@ -51,9 +50,7 @@ const Form = ({ bets, balance, clearBets }) => {
         }
       )
       .then((response) => {
-        console.log(response);
         if (response.status === 200) {
-          clearBets();
           setBetAmount(0);
           window.location.reload();
         }

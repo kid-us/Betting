@@ -63,7 +63,12 @@ const Betting = () => {
           const sports = await axios.get(
             `${request.api_url}/${key}${request.sport_with_key}`
           );
-          document.title = `${sports.data[0].sport_title} Maverick Betting`;
+
+          if (sports.data.length > 0) {
+            document.title = `${sports.data[0].sport_title} Maverick Betting`;
+          } else {
+            document.title = ` Maverick Betting`;
+          }
           // Set Data to the Sates
           setOdds(sports.data);
           setLoading(false);

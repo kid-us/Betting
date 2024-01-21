@@ -158,6 +158,17 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
             </div>
           )
       )}
+
+      {odds.length === 0 && (
+        <div className="mt-2 p-5 bg2 text-center rounded">
+          <p className="text-warning fs-4 font-monospace">
+            Currently no matches available for betting.
+          </p>
+          <p className="fs-5 text-info font-monospace">
+            Check other available Sports!{" "}
+          </p>
+        </div>
+      )}
     </div>
   );
 };
