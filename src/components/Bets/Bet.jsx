@@ -3,6 +3,7 @@ import DefaultBet from "./DefaultBet";
 import MoreBets from "./MoreBets";
 import Swiper from "../Banners/Swiper";
 import "./bet.css";
+import { sportBook } from "../../assets";
 
 const Bet = ({
   showDefaultBet,
@@ -18,8 +19,8 @@ const Bet = ({
         {showDefaultBet ? (
           <>
             <Swiper></Swiper>
-            <p className="mb-4 text-light my-3" style={{ fontSize: "large" }}>
-              <span className="bi-fire text-danger"></span> {sportName}
+            <p className="text-light my-2" style={{ fontSize: "large" }}>
+              <img src={sportBook} alt="icon" width={"40px"} /> {sportName}
             </p>
             <DefaultBet
               bets={bets}

@@ -36,9 +36,11 @@ import promoNba from "./nba.jpg";
 import promoUfc from "./ufc.jpg";
 import promoNfl from "./nfl.jpg";
 import promoBoxing from "./box.jpg";
-//
+// Menu bar
 import browse from "./browse.png";
 import vip from "./vip.png";
+// Sport Book
+import sportBook from "./sportbook.png";
 
 export {
   home,
@@ -81,4 +83,5 @@ export {
   //
   browse,
   vip,
+  sportBook,
 };
