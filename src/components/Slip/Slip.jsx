@@ -391,7 +391,7 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
         {activeBet === "multiple" ? (
           <div className="slip-footer position-relative">
             <div
-              className="position-fixed bottom-0 w-25"
+              className="position-fixed bottom-0 w-25 bg2"
               style={{ bottom: "10px" }}
             >
               <Multiple
@@ -404,7 +404,7 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
         ) : (
           <div className="slip-footer position-relative">
             <div
-              className="px-3 position-fixed bottom-0"
+              className="px-3 bg2 position-fixed bottom-0"
               style={{ bottom: "10px" }}
             >
               <div className="row pt-3" style={{ lineHeight: "10px" }}>

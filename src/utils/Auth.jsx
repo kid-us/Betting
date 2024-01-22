@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     // sessionStorage.removeItem("token");
-    window.location.href = "https://maverickhabesha.com/login.html";
+    // window.location.href = "https://maverickhabesha.com/login.html";
     setUser(null);
     setBalance(null);
   };
