@@ -114,7 +114,7 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
     }
   };
 
-  // Total Bet Amount
+  // Total Bet Amounts
   const totalBetAmount = () => {
     let sum = 0;
     for (let i = 0; i < singleBets.length; i++) {
