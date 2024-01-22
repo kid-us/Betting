@@ -37,10 +37,9 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
     }
   };
 
-  // Single Slip Goes here
   const handleInputs = (bet, index) => (e) => {
     let bet_amount = Number(e.target.value);
-    const totalPayout = parseFloat(bet.odd * bet_amount.toFixed(2));
+    const totalPayout = parseFloat((bet.odd * bet_amount).toFixed(2));
     const updatedBet = {
       ...bet,
       bet_amount: bet_amount,
@@ -49,7 +48,12 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
 
     setSingleBets((prevSingleBet) => {
       const copySingleBet = [...prevSingleBet];
+      while (copySingleBet.length <= index) {
+        copySingleBet.push(null);
+      }
+
       copySingleBet[index] = updatedBet;
+
       return copySingleBet;
     });
   };
@@ -78,12 +82,10 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
     const betAmounts = singleBets.map((bet) => bet.bet_amount);
 
     if (bets.length !== singleBets.length) {
-      alert("Error");
       setSingleBetError(true);
       return;
     }
     if (betAmounts.includes(0)) {
-      alert("Error");
       setSingleBetError(true);
       return;
     } else {
@@ -116,20 +118,18 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
 
   // Total Bet Amounts
   const totalBetAmount = () => {
-    let sum = 0;
-    for (let i = 0; i < singleBets.length; i++) {
-      sum = sum + singleBets[i].bet_amount;
-    }
-    return sum;
+    return singleBets
+      .filter((single) => single !== null)
+      .reduce((sum, single) => sum + single.bet_amount, 0);
   };
 
   // Total Est Payout
   const totalEstPayout = () => {
-    let sum = 0;
-    for (let i = 0; i < singleBets.length; i++) {
-      sum = sum + singleBets[i].potential_payout;
-    }
-    return sum.toFixed(2);
+    console.log(singleBets.length);
+    const sum = singleBets
+      .filter((single) => single !== null)
+      .reduce((sum, single) => sum + single.potential_payout, 0);
+    return parseFloat(sum.toFixed(2));
   };
 
   // Hide the Error
@@ -173,6 +173,11 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
         bet.odd !== odd
     );
     setSingleBets(filteredBets);
+  };
+
+  // Clear Single Slips
+  const clearSingleBets = () => {
+    setSingleBets([]);
   };
 
   return (
@@ -236,7 +241,11 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
             <div className="col-8" style={{ lineHeight: "10px" }}>
               <p className="text-info">Your Bets</p>
             </div>
-            <div className="col-4" style={{ lineHeight: "10px" }}>
+            <div
+              onClick={clearSingleBets}
+              className="col-4"
+              style={{ lineHeight: "10px" }}
+            >
               <p className="bg2 text-end small cursor me-3" onClick={clearBets}>
                 Clear All
               </p>
@@ -404,7 +413,7 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
         ) : (
           <div className="slip-footer position-relative">
             <div
-              className="px-3 bg2 position-fixed bottom-0"
+              className="px-3 bg2 position-fixed bottom-0 w-25"
               style={{ bottom: "10px" }}
             >
               <div className="row pt-3" style={{ lineHeight: "10px" }}>
@@ -429,13 +438,17 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
               {/* Error Message */}
               {singleBetError && errorMessage()}
               {totalBetAmount() > balance ? (
-                <button className="btn btn-light disabled bet-btn w-100 px-1 py-2 fw-semibold mt-2">
+                <button
+                  className="btn btn-light disabled bet-btn w-100 px-1 py-2 fw-semibold mt-2"
+                  disabled={singleBets.length === 0}
+                >
                   Low Balance
                 </button>
               ) : (
                 <button
                   onClick={handleSingleBetSlips}
                   className="btn btn-warning bet-btn w-100 px-1 py-2 fw-semibold mb-4"
+                  disabled={singleBets.length === 0}
                 >
                   Place Single Bet
                 </button>

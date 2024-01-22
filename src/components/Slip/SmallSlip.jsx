@@ -40,7 +40,7 @@ const SmallSlip = ({ removeBets, clearBets, bets, onBetSlipClose }) => {
   // Single Slip Goes here
   const handleInputs = (bet, index) => (e) => {
     let bet_amount = Number(e.target.value);
-    const totalPayout = parseFloat(bet.odd * bet_amount.toFixed(2));
+    const totalPayout = parseFloat((bet.odd * bet_amount).toFixed(2));
     const updatedBet = {
       ...bet,
       bet_amount: bet_amount,
@@ -49,7 +49,12 @@ const SmallSlip = ({ removeBets, clearBets, bets, onBetSlipClose }) => {
 
     setSingleBets((prevSingleBet) => {
       const copySingleBet = [...prevSingleBet];
+      while (copySingleBet.length <= index) {
+        copySingleBet.push(null);
+      }
+
       copySingleBet[index] = updatedBet;
+
       return copySingleBet;
     });
   };
@@ -112,22 +117,20 @@ const SmallSlip = ({ removeBets, clearBets, bets, onBetSlipClose }) => {
     }
   };
 
-  // Total Bet Amount
+  // Total Bet Amounts
   const totalBetAmount = () => {
-    let sum = 0;
-    for (let i = 0; i < singleBets.length; i++) {
-      sum = sum + singleBets[i].bet_amount;
-    }
-    return sum;
+    const sum = singleBets
+      .filter((single) => single !== null)
+      .reduce((sum, single) => sum + single.bet_amount, 0);
+    return parseFloat(sum.toFixed(2));
   };
 
   // Total Est Payout
   const totalEstPayout = () => {
-    let sum = 0;
-    for (let i = 0; i < singleBets.length; i++) {
-      sum = sum + singleBets[i].potential_payout;
-    }
-    return sum.toFixed(2);
+    const sum = singleBets
+      .filter((single) => single !== null)
+      .reduce((sum, single) => sum + single.potential_payout, 0);
+    return parseFloat(sum.toFixed(2));
   };
 
   // Hide the Error
@@ -172,6 +175,10 @@ const SmallSlip = ({ removeBets, clearBets, bets, onBetSlipClose }) => {
     setSingleBets(filteredBets);
   };
 
+  // Clear Single Slips
+  const clearSingleBets = () => {
+    setSingleBets([]);
+  };
   return (
     <div className="small-slip bg2">
       <div className="sm-slip-container small fw-semibold bg2 animate__animated animate__fadeInUp">
@@ -226,7 +233,11 @@ const SmallSlip = ({ removeBets, clearBets, bets, onBetSlipClose }) => {
             <div className="col-8" style={{ lineHeight: "8px" }}>
               <p className="text-info">Your Bets</p>
             </div>
-            <div className="col-4" style={{ lineHeight: "8px" }}>
+            <div
+              onClick={clearSingleBets}
+              className="col-4"
+              style={{ lineHeight: "8px" }}
+            >
               <p className="bg2 text-end small cursor me-3" onClick={clearBets}>
                 Clear All
               </p>
@@ -407,13 +418,17 @@ const SmallSlip = ({ removeBets, clearBets, bets, onBetSlipClose }) => {
               {/* Error Message */}
               {singleBetError && errorMessage()}
               {totalBetAmount() > balance ? (
-                <button className="btn btn-light disabled bet-btn w-100 px-1 py-2 fw-semibold mt-2">
+                <button
+                  className="btn btn-light disabled bet-btn w-100 px-1 py-2 fw-semibold mt-2"
+                  disabled={singleBets.length === 0}
+                >
                   Low Balance
                 </button>
               ) : (
                 <button
                   onClick={handleSingleBetSlips}
                   className="btn btn-warning bet-btn w-100 px-1 py-2 fw-semibold mt-2"
+                  disabled={singleBets.length === 0}
                 >
                   Place Single Bet
                 </button>
