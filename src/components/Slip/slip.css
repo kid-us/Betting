@@ -15,13 +15,13 @@
 
 .single-slip-container {
   height: 56%;
-  padding-bottom: 70px;
+  padding-bottom: 75px;
   overflow: scroll !important;
 }
 
 .multiple-slip-container {
   height: 50%;
-  padding-bottom: 70px;
+  padding-bottom: 75px;
   overflow: scroll !important;
 }
 /* Small Device */

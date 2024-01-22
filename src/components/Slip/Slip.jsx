@@ -435,7 +435,7 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
               ) : (
                 <button
                   onClick={handleSingleBetSlips}
-                  className="btn btn-warning bet-btn w-100 px-1 py-2 fw-semibold mt-2"
+                  className="btn btn-warning bet-btn w-100 px-1 py-2 fw-semibold mb-4"
                 >
                   Place Single Bet
                 </button>
