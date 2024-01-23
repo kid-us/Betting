@@ -106,7 +106,8 @@
 }
 
 .slip-input {
-  border: none !important;
+  /* border: none !important; */
+  border: 1px solid gray;
 }
 
 .slip-input:focus {
