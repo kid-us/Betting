@@ -106,15 +106,14 @@
 }
 
 .slip-input {
-  /* border: none !important; */
-  border: 1px solid gray;
+  border: 1px solid #434343;
 }
 
 .slip-input:focus {
   outline: none;
   background-color: #191919;
   color: #fff;
-  border: none !important;
+  border: 1px solid #434343;
 }
 
 .slip-input::placeholder {

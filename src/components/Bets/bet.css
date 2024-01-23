@@ -86,7 +86,7 @@ li {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border: 1px solid gray;
+  border: 1px solid #434343;
 }
 
 /* TEam Name */
