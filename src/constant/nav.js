@@ -8,21 +8,20 @@ export const navbar = [
   //   img: sports,
   // },
   {
-    title: "Tournaments",
+    title: "Challenges",
     link: "http://maverickhabesha.com/tournaments.html",
     index: 1,
     img: tournament,
   },
   {
-    title: "Games",
+    title: "Casino",
     link: "http://maverickhabesha.com/games.html",
     index: 2,
     img: game,
   },
 ];
 
-const op =
- {
+const op = {
   id: "fc1e263384945b5e705ddd7ac41fb48e",
   sport_key: "soccer_uefa_champs_league",
   sport_title: "UEFA Champions League",

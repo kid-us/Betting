@@ -144,7 +144,7 @@ const DefaultBet = ({ bets, odds, onSelectBet }) => {
                               )
                                 ? "selected"
                                 : "bg odds"
-                            } cursor rounded ps-lg-4 ps-2 pb-1 pt-3`}
+                            } cursor rounded ps-lg-4 ps-2 pb-1 pt-3 `}
                           >
                             <p className="team-name">{outcome.name}</p>
                             <p className="text-info font-monospace">

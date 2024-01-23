@@ -63,7 +63,7 @@ const Form = ({ bets, balance, clearBets }) => {
   return (
     <>
       <div
-        className="form-container pt-2 fw-semibold px-3 pt-3"
+        className="form-container pt-2 fw-semibold px-3 pt-3 border-bottom border-light"
         style={{ lineHeight: "10px" }}
       >
         <div className="row">
