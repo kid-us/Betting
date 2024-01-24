@@ -125,7 +125,6 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
 
   // Total Est Payout
   const totalEstPayout = () => {
-    console.log(singleBets.length);
     const sum = singleBets
       .filter((single) => single !== null)
       .reduce((sum, single) => sum + single.potential_payout, 0);
