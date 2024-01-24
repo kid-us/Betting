@@ -393,7 +393,7 @@ const SmallSlip = ({ removeBets, clearBets, bets, onBetSlipClose }) => {
         ) : (
           <div className="slip-footer position-relative">
             <div
-              className="px-3 bg2 w-100 position-fixed bottom-0 border-bottom border-light"
+              className="px-3 bg2 w-100 position-fixed bottom-0"
               style={{ bottom: "10px" }}
             >
               <div className="row" style={{ lineHeight: "10px" }}>
