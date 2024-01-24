@@ -371,7 +371,12 @@ z .bet-4 {
 
 /*  */
 .menu-bar {
+  border-top: 1px solid rgb(109, 109, 109);
   position: fixed;
   bottom: -0.5em;
   z-index: 12;
+}
+
+.menu-bar-text {
+  color: #c3c3c3;
 }
