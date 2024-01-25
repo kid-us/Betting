@@ -23,7 +23,7 @@ const Small = ({ user, balance }) => {
   return (
     <>
       <div className="d-block d-md-none">
-        <div className="row justify-content-between px-2">
+        <div className="row justify-content-between px-2 pt-1">
           <div className="col-2">
             <Link to="/sports/home" className="navbar-brand">
               <img src={home} alt="logo" className="mt-1" width="45px" />
