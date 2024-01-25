@@ -6,7 +6,7 @@ const RequireAuth = ({ children }) => {
   const auth = useAuth();
 
   const key =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjAwMjY5MSwianRpIjoiMjI5MjUxMjktYzRiYi00ZjljLTk2MzUtNmYzMjg4ODA3ZDFiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImtpZHVzaGgyOUBnbWFpbC5jb20iLCJuYmYiOjE3MDYwMDI2OTEsImV4cCI6MTcwNjI2MTg5MX0.R0C2BhgWQ6pbinvLdH9bPfoR6-MRP8hbc7bgVFT-3W4";
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjE4NTMzOSwianRpIjoiY2FlYmVlMTctYTFlOC00NDFiLTk4YmQtNmQwODUxY2U2MzgwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImtpZHVzaGgyOUBnbWFpbC5jb20iLCJuYmYiOjE3MDYxODUzMzksImV4cCI6MTcwNjQ0NDUzOX0.Tz2OuffLRc_S0C7kifw_1S3Hai058tsYkZPwmkXrdG4";
 
   localStorage.setItem("access_token", key);
 
