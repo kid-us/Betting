@@ -175,9 +175,8 @@ div a {
 
 .sm-sidebar-wrapper {
   position: fixed;
-  height: 85%;
+  height: 100%;
   left: 0;
-  top: 4em;
   bottom: 0;
   z-index: 1;
   background-color: var(--main-color);
@@ -370,8 +369,12 @@ z .bet-4 {
 }
 
 /*  */
+.col-20 {
+  width: 20% !important;
+}
+
 .menu-bar {
-  border-top: 1px solid rgb(109, 109, 109);
+  /* border-top: 1px solid rgb(109, 109, 109); */
   position: fixed;
   bottom: -0.5em;
   z-index: 12;

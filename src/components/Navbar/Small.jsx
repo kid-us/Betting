@@ -1,8 +1,8 @@
 import { React, useState } from "react";
-import logo from "../../assets/mmm.png";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthenticateUser";
 import SmallMenu from "./SmallMenu";
+import { home } from "../../assets";
 
 const Small = ({ user, balance }) => {
   const auth = useAuth();
@@ -26,7 +26,7 @@ const Small = ({ user, balance }) => {
         <div className="row justify-content-between px-2">
           <div className="col-2">
             <Link to="/sports/home" className="navbar-brand">
-              <img src={logo} alt="logo" className="mt-1" width="45px" />
+              <img src={home} alt="logo" className="mt-1" width="45px" />
             </Link>
           </div>
 
@@ -40,7 +40,7 @@ const Small = ({ user, balance }) => {
               </span>
               <Link
                 to="http://maverickhabesha.com/wallet.html"
-                className="py-1 wallet rounded bg2"
+                className="py-1 wallet rounded bg2 small"
               >
                 <span id="sm-user-balance" className="py-1 px-3 bg-dark small">
                   {balance} <span className="small">ETB</span>

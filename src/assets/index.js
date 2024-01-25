@@ -1,12 +1,12 @@
-import home from "./mmm.png";
-import sports from "./throw.png";
-import game from "./dice.png";
-import tournament from "./trophy.png";
-import wallet from "./wallet.png";
-import promotion from "./promotion.png";
-import guide from "./guide.png";
-import faq from "./faq.png";
-import like from "./like.png";
+import home from "./mmm.svg";
+import sports from "./sports2.svg";
+import game from "./casino2.svg";
+import tournament from "./flag.svg";
+import wallet from "./wallet.svg";
+import promotion from "./promotion.svg";
+import guide from "./guide.svg";
+import faq from "./faq.svg";
+import like from "./like.svg";
 import logo1 from "./logolight1.png";
 import logo2 from "./logo.png";
 // Bet
@@ -19,7 +19,7 @@ import cricket from "./bets/cricket.svg";
 import basketball from "./bets/basketball.svg";
 import rugby from "./bets/helmet.svg";
 import mma from "./bets/mma.svg";
-import slip from "./bets/slip1.svg";
+import slip from "./slip.svg";
 import slip2 from "./bets/slip.svg";
 // Loading
 import load_basketball from "./Loading/basketball.png";
@@ -37,8 +37,8 @@ import promoUfc from "./ufc.jpg";
 import promoNfl from "./nfl.jpg";
 import promoBoxing from "./box.jpg";
 // Menu bar
-import browse from "./browse.png";
-import vip from "./vip.png";
+import browse from "./browse.svg";
+import vip from "./vip.svg";
 // Sport Book
 import sportBook from "./sportbook.png";
 
