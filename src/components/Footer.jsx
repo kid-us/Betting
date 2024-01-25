@@ -30,7 +30,7 @@ const Footer = () => {
             <Support></Support>
 
             <About></About>
-            <div class="col-lg-4 col-md-4 col-1 mt-lg-3 mt-5 d-none d-md-block">
+            <div className="col-lg-4 col-md-4 col-1 mt-lg-3 mt-5 d-none d-md-block">
               <img src={age} alt="18+" width="30px" />
             </div>
             <div className="col-lg-5 col-md-6 col-1 mt-lg-3 mt-5">
@@ -42,7 +42,7 @@ const Footer = () => {
             <div className="col-lg-3 col-md-6 col-7 mt-lg-3 mt-5">
               <img
                 src={age}
-                class="d-block d-md-none mb-3"
+                className="d-block d-md-none mb-3"
                 alt="18+"
                 width="30px"
               />
