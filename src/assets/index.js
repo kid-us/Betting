@@ -41,6 +41,8 @@ import browse from "./browse.svg";
 import vip from "./vip.svg";
 // Sport Book
 import sportBook from "./sportbook.png";
+// 18+
+import age from "./18.svg";
 
 export {
   home,
@@ -84,4 +86,6 @@ export {
   browse,
   vip,
   sportBook,
+  //
+  age,
 };

@@ -44,7 +44,7 @@ export const games = [
     id: 7,
   },
   {
-    title: "Dragon Tower",
+    title: "Dragon Bonanza",
     link: "https://maverickhabesha.com/games/dragon-tower/",
     id: 8,
   },

@@ -5,6 +5,7 @@ import Feature from "./Footer/Feature";
 import Games from "./Footer/Games";
 import Support from "./Footer/Support";
 import About from "./Footer/About";
+import { age } from "../assets";
 
 const Footer = () => {
   return (
@@ -29,7 +30,9 @@ const Footer = () => {
             <Support></Support>
 
             <About></About>
-
+            <div class="col-lg-4 col-md-4 col-1 mt-lg-3 mt-5 d-none d-md-block">
+              <img src={age} alt="18+" width="30px" />
+            </div>
             <div className="col-lg-5 col-md-6 col-1 mt-lg-3 mt-5">
               <p className="small footer-link d-none d-md-block">
                 &copy; 2023 All right reserved Maverick Habesha
@@ -37,6 +40,12 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-3 col-md-6 col-7 mt-lg-3 mt-5">
+              <img
+                src={age}
+                class="d-block d-md-none mb-3"
+                alt="18+"
+                width="30px"
+              />
               <Link
                 to="https://www.tiktok.com/@maverickhabesha?_t=8gzf8eJ6Po6&_r=1https://www.tiktok.com/@maverickhabesha?_t=8gzf8eJ6Po6&_r=1"
                 className="text-warning bi-tiktok fs-5"
