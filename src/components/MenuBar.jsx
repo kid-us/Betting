@@ -5,7 +5,7 @@ const MenuBar = ({ bets, onClick, onShowSport, from }) => {
   return (
     <>
       <div className="menu-bar bg w-100 d-block d-lg-none px-3">
-        <div className="row text-center fw-semibold pb-0 shadow-lg pt-2 text-black">
+        <div className="row text-center fw-semibold pb-0 shadow-lg pt-2 text-black small">
           <div className="col-20" onClick={onShowSport}>
             <img src={browse} width={"27px"} alt="" />
             <p className="pt-2 fw-semibold menu-bar-text small">Browse</p>
@@ -45,7 +45,7 @@ const MenuBar = ({ bets, onClick, onShowSport, from }) => {
           <div className="col-20">
             <Link to={"https://maverickhabesha.com/vip-club.html"}>
               <img src={vip} width={"25px"} alt="icon" />
-              <p className="pt-2 fw-semibold menu-bar-text small">Vip</p>
+              <p className="pt-2 fw-semibold menu-bar-text small">VIP</p>
             </Link>
           </div>
         </div>
