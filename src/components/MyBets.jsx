@@ -176,7 +176,7 @@ const MyBets = () => {
               <Loading width={betsWidth === "bet-2" ? "81.1%" : "56%"} />
             ) : (
               <>
-                <div className="row justify-content-between fw-semibold mt-3">
+                <div className="row justify-content-between fw-semibold mt-2">
                   {/* Dropdown */}
                   <div className="col-lg-5 col-6 ms-2">
                     <img src={slip} alt="" width={"30px"} />
@@ -240,7 +240,7 @@ const MyBets = () => {
 
                   {/* Single Multiple Buttons */}
                   <div className="d-block d-md-none">
-                    <div className="row mt-5 shadow bg2 rounded py-1 ps-3 mx-1">
+                    <div className="row mt-4 shadow bg2 rounded py-1 ps-3 mx-1">
                       <div
                         onClick={() => handleDisplayBet("Single")}
                         className={`col-6 ps-5 ${
@@ -265,8 +265,8 @@ const MyBets = () => {
                   </div>
 
                   {/* Bet Type */}
-                  <div className="container pt-2">
-                    <div className="bg2 row rounded py-4 p-lg- mt-4 mx-lg-1 px-2">
+                  <div className="container pt-lg-2">
+                    <div className="bg2 row rounded py-3 mt-3 mx-lg-1 px-2">
                       {/* Single Large Device */}
                       <div className="col-lg-6 col-12">
                         <div className="d-none d-md-block">

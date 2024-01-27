@@ -11,6 +11,13 @@ const MenuBar = ({ bets, onClick, onShowSport, from }) => {
             <p className="pt-2 fw-semibold menu-bar-text small">Browse</p>
           </div>
 
+          <div className="col-20 ">
+            <Link to={"https://maverickhabesha.com/games.html"}>
+              <img src={game} width={"25px"} alt="icon" />
+              <p className="pt-2 fw-semibold menu-bar-text small">Casino</p>
+            </Link>
+          </div>
+
           {from === "my-bets" ? (
             <div className="col-20 ">
               <Link to={"/sports/home"}>
@@ -27,13 +34,6 @@ const MenuBar = ({ bets, onClick, onShowSport, from }) => {
               <p className="pt-2 fw-semibold menu-bar-text small">Slip</p>
             </div>
           )}
-
-          <div className="col-20 ">
-            <Link to={"https://maverickhabesha.com/games.html"}>
-              <img src={game} width={"25px"} alt="icon" />
-              <p className="pt-2 fw-semibold menu-bar-text small">Casino</p>
-            </Link>
-          </div>
 
           <div className="col-20 ">
             <Link to={"https://maverickhabesha.com/games.html"}>

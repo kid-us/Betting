@@ -199,7 +199,7 @@ const Slip = ({ removeBets, clearBets, onHandleBetSlip, bets }) => {
             </span>
             <span
               onClick={onHandleBetSlip}
-              className="cursor bi-x-lg slip-close text-end ps-4"
+              className="cursor bi-x-lg slip-close"
             ></span>
           </p>
           {/* Single and Multiple Buttons */}
