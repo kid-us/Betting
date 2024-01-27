@@ -165,7 +165,7 @@ const MySingleBets = ({ singleSlips, slipType, addBalance, itemsPerPage }) => {
               className="img-fluid pt-lg-5"
               width={"200px"}
             />
-            <div className="mt-5" style={{ lineHeight: "10px" }}>
+            <div className="mt-5 small" style={{ lineHeight: "10px" }}>
               <p>No {slipType !== "All" ? slipType : ""} Bets</p>
               <p>Start Betting Now!</p>
             </div>
