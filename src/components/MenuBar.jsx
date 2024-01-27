@@ -31,7 +31,7 @@ const MenuBar = ({ bets, onClick, onShowSport, from }) => {
               <span className="position-absolute top-0 start-75 translate-middle badge rounded-pill bg-info text-black fw-semibold">
                 {bets.length}
               </span>
-              <p className="pt-2 fw-semibold menu-bar-text small">Slip</p>
+              <p className="pt-2 fw-semibold menu-bar-text small">Bet Slip</p>
             </div>
           )}
 

@@ -365,8 +365,6 @@ const MyBets = () => {
                     </div>
                   </div>
                 </div>
-
-                <Support></Support>
                 <Footer></Footer>
               </>
             )}
