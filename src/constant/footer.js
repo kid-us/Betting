@@ -1,7 +1,7 @@
 export const features = [
   {
     title: "Games",
-    link: "http://maverickhabesha.com/games.html",
+    link: "https://maverickhabesha.com/games.html",
     id: 0,
   },
   {
@@ -11,7 +11,7 @@ export const features = [
   },
   {
     title: "Tournaments",
-    link: "http://maverickhabesha.com/tournaments.html",
+    link: "https://maverickhabesha.com/tournaments.html",
     id: 2,
   },
 
@@ -30,7 +30,7 @@ export const features = [
 export const games = [
   {
     title: "Roulette",
-    link: "http://maverickhabesha.com/roulette",
+    link: "https://maverickhabesha.com/roulette",
     id: 5,
   },
   {
@@ -53,7 +53,7 @@ export const games = [
 export const supports = [
   {
     title: "Contact",
-    link: "http://maverickhabesha.com/conatct.html",
+    link: "https://maverickhabesha.com/conatct.html",
     id: 8,
   },
   {
@@ -71,17 +71,17 @@ export const supports = [
 export const aboutUs = [
   {
     title: "About",
-    link: "http://maverickhabesha.com/about.html",
+    link: "https://maverickhabesha.com/about.html",
     id: 11,
   },
   {
     title: "Terms",
-    link: "http://maverickhabesha.com/terms.html",
+    link: "https://maverickhabesha.com/terms.html",
     id: 12,
   },
   {
     title: "Privacy Policy",
-    link: "http://maverickhabesha.com/privacy.html",
+    link: "https://maverickhabesha.com/privacy.html",
     id: 13,
   },
 ];

@@ -25,7 +25,7 @@ const Large = ({ user, balance }) => {
     <>
       <div className="d-none d-md-block">
         <div className="float-start">
-          <Link to="/sports/home" className="navbar-brand ps-5">
+          <Link to="https://maverickhabesha.com" className="navbar-brand ps-5">
             <img src={logo} alt="logo" width="120px" />
           </Link>
         </div>
@@ -40,7 +40,7 @@ const Large = ({ user, balance }) => {
             </span>
 
             <Link
-              to="http://maverickhabesha.com/wallet.html"
+              to="https://maverickhabesha.com/wallet.html"
               className="wallet bg py-1 rounded"
             >
               <span id="user-balance" className="px-2 small">

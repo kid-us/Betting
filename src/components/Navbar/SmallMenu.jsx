@@ -23,7 +23,7 @@ const SmallMenu = ({ username, onClick, onLogout }) => {
 
             <li className="bg2 rounded ps-1 py-1">
               <Link
-                to="http://maverickhabesha.com/dashboard.html"
+                to="https://maverickhabesha.com/dashboard.html"
                 className="fs-4 fw-semibold"
               >
                 <span className="bi-person-fill text-warning"></span> Profile
@@ -31,7 +31,7 @@ const SmallMenu = ({ username, onClick, onLogout }) => {
             </li>
             <li className="bg2 rounded ps-1 py-1">
               <Link
-                to="http://maverickhabesha.com/tournaments.html"
+                to="https://maverickhabesha.com/tournaments.html"
                 className="fs-4 fw-semibold"
               >
                 <img src={tournament} width="20px" /> Challenges
@@ -39,7 +39,7 @@ const SmallMenu = ({ username, onClick, onLogout }) => {
             </li>
             <li className="bg2 rounded ps-1 py-1">
               <Link
-                to="http://maverickhabesha.com/games.html"
+                to="https://maverickhabesha.com/games.html"
                 className="fs-4 fw-semibold"
               >
                 <img src={game} width="20px" /> Casino
@@ -48,7 +48,7 @@ const SmallMenu = ({ username, onClick, onLogout }) => {
             <hr className="my-2" />
             <li className="bg2 rounded ps-1 py-1">
               <Link
-                to="http://maverickhabesha.com/setting.html"
+                to="https://maverickhabesha.com/setting.html"
                 className="fs-4 fw-semibold"
               >
                 <span className="bi-gear-fill text-warning"></span> Setting

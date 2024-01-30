@@ -25,7 +25,7 @@ const Small = ({ user, balance }) => {
       <div className="d-block d-md-none">
         <div className="row justify-content-between px-2 pt-1">
           <div className="col-2">
-            <Link to="/sports/home" className="navbar-brand">
+            <Link to="https://maverickhabesha.com" className="navbar-brand">
               <img src={home} alt="logo" className="mt-1" width="45px" />
             </Link>
           </div>
@@ -39,7 +39,7 @@ const Small = ({ user, balance }) => {
                 ↻
               </span>
               <Link
-                to="http://maverickhabesha.com/wallet.html"
+                to="https://maverickhabesha.com/wallet.html"
                 className="py-1 wallet rounded bg2 small"
               >
                 <span id="sm-user-balance" className="py-1 px-3 bg-dark small">
