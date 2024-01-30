@@ -1,12 +1,6 @@
 import { sports, game, tournament } from "../assets";
 
 export const navbar = [
-  // {
-  //   title: "Sports",
-  //   link: "/",
-  //   index: 0,
-  //   img: sports,
-  // },
   {
     title: "Challenges",
     link: "https://maverickhabesha.com/tournaments.html",

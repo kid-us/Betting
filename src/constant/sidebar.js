@@ -25,13 +25,13 @@ export const sidebar = [
   {
     title: "Promotion",
     id: 5,
-    link: "http://maverickhabesha.com/promotion.html",
+    link: "https://maverickhabesha.com/promotion.html",
     img: promotion,
   },
   {
     title: "Guidelines",
     id: 6,
-    link: "http://maverickhabesha.com/guide.html",
+    link: "https://maverickhabesha.com/guide.html",
     img: guide,
   },
 
